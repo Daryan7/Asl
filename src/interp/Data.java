@@ -39,15 +39,22 @@ package interp;
 
 import parser.*;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Data {
     /** Types of data */
-    public enum Type {VOID, BOOLEAN, INTEGER;}
+    public enum Type {VOID, BOOLEAN, INTEGER, ARRAY;}
 
     /** Type of data*/
     private Type type;
 
     /** Value of the data */
-    private int value; 
+    private int value;
+
+    private ArrayList<Integer> array;
+
+    Data(ArrayList<Integer> array) {type = Type.ARRAY; this.array = array;}
 
     /** Constructor for integers */
     Data(int v) { type = Type.INTEGER; value = v; }
@@ -73,6 +80,8 @@ public class Data {
     /** Indicates whether the data is void */
     public boolean isVoid() { return type == Type.VOID; }
 
+    public boolean isArray() { return type == Type.ARRAY; }
+
     /**
      * Gets the value of an integer data. The method asserts that
      * the data is an integer.
@@ -80,6 +89,11 @@ public class Data {
     public int getIntegerValue() {
         assert type == Type.INTEGER;
         return value;
+    }
+
+    public ArrayList<Integer> getArrayValue() {
+        assert type == Type.ARRAY;
+        return array;
     }
 
     /**
@@ -103,6 +117,7 @@ public class Data {
     /** Returns a string representing the data in textual form. */
     public String toString() {
         if (type == Type.BOOLEAN) return value == 1 ? "true" : "false";
+        else if (type == Type.ARRAY) {return "array";}
         return Integer.toString(value);
     }
     

@@ -114,7 +114,7 @@ return_stmt	:	RETURN^ expr?
         ;
 
 // Read a variable
-read	:	READ^ ID
+read	:	READ^ var
         ;
 
 // Write an expression or a string
@@ -164,35 +164,35 @@ var : ID
 
 // Basic tokens
 EQUAL	: '=' ;
-NOT_EQUAL: '!=' ;
-LT	    : '<' ;
-LE	    : '<=';
-GT	    : '>';
-GE	    : '>=';
+NOT_EQUAL: 	'!=' ;
+LT	: '<' ;
+LE	: '<=';
+GT	: '>';
+GE	: '>=';
 PLUS	: '+' ;
 MINUS	: '-' ;
-MUL	    : '*';
-DIV	    : '/';
-MOD	    : '%' ;
-NOT	    : 'not';
-AND	    : 'and' ;
-OR	    : 'or' ;	
+MUL	: '*';
+DIV	: '/';
+MOD	: '%' ;
+NOT	: 'not';
+AND	: 'and' ;
+OR	: 'or' ;	
 IF  	: 'if' ;
 THEN	: 'then' ;
 ELSE	: 'else' ;
 ENDIF	: 'endif' ;
 WHILE	: 'while' ;
-DO	    : 'do' ;
-ENDWHILE: 'endwhile' ;
+DO	: 'do' ;
+ENDWHILE	: 'endwhile' ;
 FUNC	: 'func' ;
 ENDFUNC	: 'endfunc' ;
 RETURN	: 'return' ;
 READ	: 'read' ;
 WRITE	: 'write' ;
-TRUE    : 'true' ;
-FALSE   : 'false';
-ID  	:	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
-INT 	:	'0'..'9'+ ;
+TRUE    	: 'true' ;
+FALSE  	: 'false';
+ID  	:('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
+INT 	:'0'..'9'+ ;
 
 // C-style comments
 COMMENT	: '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}

@@ -324,6 +324,12 @@ public class Interp {
         // Atoms
         switch (type) {
             // A variable
+            case AslLexer.VECTOR:
+                value = Stack.getVariable(t.getChild(0).getText());
+                Data index = evaluateExpression(t.getChild(1));
+                value = new Data(value.getArrayValue()[index.getIntegerValue()]);
+                break;
+
             case AslLexer.ID:
                 value = new Data(Stack.getVariable(t.getText()));
                 break;
