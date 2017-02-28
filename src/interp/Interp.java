@@ -78,7 +78,7 @@ public class Interp {
             try {
                 trace = new PrintWriter(new FileWriter(tracefile));
             } catch (IOException e) {
-                System.err.println(e);
+                e.printStackTrace();
                 System.exit(1);
             }
         }
@@ -181,7 +181,11 @@ public class Interp {
         // Copy the parameters to the current activation record
         for (int i = 0; i < nparam; ++i) {
             String param_name = p.getChild(i).getChild(0).getText();
-            Stack.defineVariable(param_name, Arg_values.get(i));
+            if (p.getChild(i).getChild(0).getType() == AslLexer.VECTOR) {
+                ArrayList<Integer> arrayList = Arg_values.get(i).getArrayValue();
+                Stack.defineArray(param_name, arrayList);
+            }
+            else Stack.defineVariable(param_name, Arg_values.get(i));
         }
 
         // Execute the instructions
@@ -238,7 +242,10 @@ public class Interp {
             // Assignment
             case AslLexer.ASSIGN:
                 value = evaluateExpression(t.getChild(1));
-                Stack.defineVariable (t.getChild(0).getText(), value);
+                if (t.getChild(0).getType() == AslLexer.VECTOR) {
+                    Stack.defineArray(t.getChild(0).getChild(0).getText(), value, evaluateExpression(t.getChild(0).getChild(1)).getIntegerValue());
+                }
+                else Stack.defineVariable (t.getChild(0).getText(), value);
                 return null;
 
             // If-then-else
@@ -327,7 +334,7 @@ public class Interp {
             case AslLexer.VECTOR:
                 value = Stack.getVariable(t.getChild(0).getText());
                 Data index = evaluateExpression(t.getChild(1));
-                value = new Data(value.getArrayValue()[index.getIntegerValue()]);
+                value = new Data(value.getArrayValue().get(index.getIntegerValue()));
                 break;
 
             case AslLexer.ID:
@@ -485,7 +492,7 @@ public class Interp {
         AslTree pars = AstF.getChild(1);   // Parameters of the function
         
         // Create the list of parameters
-        ArrayList<Data> Params = new ArrayList<Data> ();
+        ArrayList<Data> Params = new ArrayList<> ();
         int n = pars.getChildCount();
 
         // Check that the number of parameters is the same
@@ -504,7 +511,8 @@ public class Interp {
             setLineNumber(a);
             if (p.getType() == AslLexer.PVALUE) {
                 // Pass by value: evaluate the expression
-                Params.add(i,evaluateExpression(a));
+                if (p.getChild(0).getType() == AslLexer.ID) Params.add(i, evaluateExpression(a));
+                else Params.add(i, Stack.getVariable(p.getChild(0).getChild(0).getText()));
             } else {
                 // Pass by reference: check that it is a variable
                 if (a.getType() != AslLexer.ID) {

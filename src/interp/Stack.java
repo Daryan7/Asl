@@ -27,9 +27,7 @@
 
 package interp;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.ListIterator;
+import java.util.*;
 
 /**
  * Class to represent the memory of the virtual machine of the
@@ -94,6 +92,28 @@ public class Stack {
         Data d = CurrentAR.get(name);
         if (d == null) CurrentAR.put(name, value); // New definition
         else d.setData(value); // Use the previous data 
+    }
+
+    public void defineArray(String name, Data value, int size) {
+        Data d = CurrentAR.get(name);
+        if (d == null) {
+            ArrayList<Integer> arrayList = new ArrayList<>(Collections.nCopies(size, 0));
+            arrayList.set(size-1, value.getIntegerValue());
+            CurrentAR.put(name, new Data(arrayList));
+        }
+        else if (d.isArray()) {
+            d.getArrayValue().addAll(Collections.nCopies(size, 0));
+            d.getArrayValue().set(size-1, value.getIntegerValue());
+        }
+        else {
+            ArrayList<Integer> arrayList = new ArrayList<>(Collections.nCopies(size, 0));
+            arrayList.set(size-1, value.getIntegerValue());
+            d.setData(new Data(arrayList));
+        }
+    }
+
+    public void defineArray(String name, ArrayList<Integer> array) {
+        CurrentAR.get(name).setData(new Data(array));
     }
 
     /** Gets the value of the variable. The value is represented as
