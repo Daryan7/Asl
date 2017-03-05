@@ -242,6 +242,10 @@ public class Interp {
             case AslLexer.ASSIGN:
                 value = evaluateExpression(t.getChild(1));
                 if (t.getChild(0).getType() == AslLexer.VECTOR) {
+                    Data result = evaluateExpression(t.getChild(0).getChild(1));
+                    if (!result.isInteger()) throw new RuntimeException("Array index must be an integer value");
+                    int index = result.getIntegerValue();
+                    //TODO: cambiar el modo de definir vectores, hay que hacerlo en el intérprete
                     Stack.defineArray(t.getChild(0).getChild(0).getText(), value, evaluateExpression(t.getChild(0).getChild(1)).getIntegerValue());
                 }
                 else Stack.defineVariable (t.getChild(0).getText(), value);
@@ -519,7 +523,6 @@ public class Interp {
                 }
                 // Find the variable and pass the reference
                 Data v = Stack.getVariable(a.getText());
-                if (v.isArray()) throw new RuntimeException("Arrays are always passed as reference");
                 Params.add(i,v);
             }
         }

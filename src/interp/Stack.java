@@ -99,11 +99,13 @@ public class Stack {
         if (d == null) {
             ArrayList<Integer> arrayList = new ArrayList<>(Collections.nCopies(size, 0));
             arrayList.set(size-1, value.getIntegerValue());
+            System.out.println(arrayList.size());
             CurrentAR.put(name, new Data(arrayList));
         }
         else if (d.isArray()) {
-            d.getArrayValue().addAll(Collections.nCopies(size, 0));
-            d.getArrayValue().set(size-1, value.getIntegerValue());
+            ArrayList<Integer> arrayList = d.getArrayValue();
+            arrayList.addAll(Collections.nCopies(size, 0));
+            arrayList.set(size-1, value.getIntegerValue());
         }
         else {
             ArrayList<Integer> arrayList = new ArrayList<>(Collections.nCopies(size, 0));
