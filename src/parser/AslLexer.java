@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /mnt/d/Downloads/Asl/src/parser/Asl.g 2017-02-27 22:07:55
+// $ANTLR 3.4 C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g 2017-03-05 13:40:51
 
 package parser;
 
@@ -76,15 +76,15 @@ public class AslLexer extends Lexer {
     public AslLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "/mnt/d/Downloads/Asl/src/parser/Asl.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g"; }
 
     // $ANTLR start "T__48"
     public final void mT__48() throws RecognitionException {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:6:7: ( '&' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:6:9: '&'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:6:7: ( '&' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:6:9: '&'
             {
             match('&'); 
 
@@ -104,8 +104,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:7:7: ( '(' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:7:9: '('
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:7:7: ( '(' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:7:9: '('
             {
             match('('); 
 
@@ -125,8 +125,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:8:7: ( ')' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:8:9: ')'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:8:7: ( ')' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:8:9: ')'
             {
             match(')'); 
 
@@ -146,8 +146,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:9:7: ( ',' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:9:9: ','
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:9:7: ( ',' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:9:9: ','
             {
             match(','); 
 
@@ -167,8 +167,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:10:7: ( ';' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:10:9: ';'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:10:7: ( ';' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:10:9: ';'
             {
             match(';'); 
 
@@ -188,8 +188,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:11:7: ( '[' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:11:9: '['
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:11:7: ( '[' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:11:9: '['
             {
             match('['); 
 
@@ -209,8 +209,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:12:7: ( ']' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:12:9: ']'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:12:7: ( ']' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:12:9: ']'
             {
             match(']'); 
 
@@ -230,8 +230,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:166:7: ( '=' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:166:9: '='
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:166:7: ( '=' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:166:9: '='
             {
             match('='); 
 
@@ -251,8 +251,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:167:10: ( '!=' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:167:12: '!='
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:167:10: ( '!=' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:167:13: '!='
             {
             match("!="); 
 
@@ -274,8 +274,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:168:8: ( '<' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:168:10: '<'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:168:4: ( '<' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:168:6: '<'
             {
             match('<'); 
 
@@ -295,8 +295,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:169:8: ( '<=' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:169:10: '<='
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:169:4: ( '<=' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:169:6: '<='
             {
             match("<="); 
 
@@ -318,8 +318,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:170:8: ( '>' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:170:10: '>'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:170:4: ( '>' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:170:6: '>'
             {
             match('>'); 
 
@@ -339,8 +339,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:171:8: ( '>=' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:171:10: '>='
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:171:4: ( '>=' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:171:6: '>='
             {
             match(">="); 
 
@@ -362,8 +362,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:172:6: ( '+' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:172:8: '+'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:172:6: ( '+' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:172:8: '+'
             {
             match('+'); 
 
@@ -383,8 +383,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:173:7: ( '-' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:173:9: '-'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:173:7: ( '-' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:173:9: '-'
             {
             match('-'); 
 
@@ -404,8 +404,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MUL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:174:9: ( '*' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:174:11: '*'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:174:5: ( '*' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:174:7: '*'
             {
             match('*'); 
 
@@ -425,8 +425,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:175:9: ( '/' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:175:11: '/'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:175:5: ( '/' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:175:7: '/'
             {
             match('/'); 
 
@@ -446,8 +446,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:176:9: ( '%' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:176:11: '%'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:176:5: ( '%' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:176:7: '%'
             {
             match('%'); 
 
@@ -467,8 +467,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:177:9: ( 'not' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:177:11: 'not'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:177:5: ( 'not' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:177:7: 'not'
             {
             match("not"); 
 
@@ -490,8 +490,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:178:9: ( 'and' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:178:11: 'and'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:178:5: ( 'and' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:178:7: 'and'
             {
             match("and"); 
 
@@ -513,8 +513,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:179:8: ( 'or' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:179:10: 'or'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:179:4: ( 'or' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:179:6: 'or'
             {
             match("or"); 
 
@@ -536,8 +536,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:180:6: ( 'if' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:180:8: 'if'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:180:6: ( 'if' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:180:8: 'if'
             {
             match("if"); 
 
@@ -559,8 +559,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = THEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:181:6: ( 'then' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:181:8: 'then'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:181:6: ( 'then' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:181:8: 'then'
             {
             match("then"); 
 
@@ -582,8 +582,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:182:6: ( 'else' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:182:8: 'else'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:182:6: ( 'else' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:182:8: 'else'
             {
             match("else"); 
 
@@ -605,8 +605,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:183:7: ( 'endif' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:183:9: 'endif'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:183:7: ( 'endif' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:183:9: 'endif'
             {
             match("endif"); 
 
@@ -628,8 +628,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:184:7: ( 'while' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:184:9: 'while'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:184:7: ( 'while' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:184:9: 'while'
             {
             match("while"); 
 
@@ -651,8 +651,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:185:8: ( 'do' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:185:10: 'do'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:185:4: ( 'do' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:185:6: 'do'
             {
             match("do"); 
 
@@ -674,8 +674,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDWHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:186:9: ( 'endwhile' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:186:11: 'endwhile'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:186:10: ( 'endwhile' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:186:12: 'endwhile'
             {
             match("endwhile"); 
 
@@ -697,8 +697,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:187:6: ( 'func' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:187:8: 'func'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:187:6: ( 'func' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:187:8: 'func'
             {
             match("func"); 
 
@@ -720,8 +720,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDFUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:188:9: ( 'endfunc' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:188:11: 'endfunc'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:188:9: ( 'endfunc' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:188:11: 'endfunc'
             {
             match("endfunc"); 
 
@@ -743,8 +743,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:189:8: ( 'return' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:189:10: 'return'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:189:8: ( 'return' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:189:10: 'return'
             {
             match("return"); 
 
@@ -766,8 +766,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:190:6: ( 'read' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:190:8: 'read'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:190:6: ( 'read' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:190:8: 'read'
             {
             match("read"); 
 
@@ -789,8 +789,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WRITE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:191:7: ( 'write' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:191:9: 'write'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:191:7: ( 'write' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:191:9: 'write'
             {
             match("write"); 
 
@@ -812,8 +812,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:192:9: ( 'true' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:192:11: 'true'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:192:10: ( 'true' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:192:12: 'true'
             {
             match("true"); 
 
@@ -835,8 +835,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FALSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:193:9: ( 'false' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:193:11: 'false'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:193:9: ( 'false' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:193:11: 'false'
             {
             match("false"); 
 
@@ -858,8 +858,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:194:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:194:8: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:194:6: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:194:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -871,7 +871,7 @@ public class AslLexer extends Lexer {
             }
 
 
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:194:32: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:194:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop1:
             do {
                 int alt1=2;
@@ -884,7 +884,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /mnt/d/Downloads/Asl/src/parser/Asl.g:
+            	    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -921,10 +921,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:195:6: ( ( '0' .. '9' )+ )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:195:8: ( '0' .. '9' )+
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:195:6: ( ( '0' .. '9' )+ )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:195:7: ( '0' .. '9' )+
             {
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:195:8: ( '0' .. '9' )+
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:195:7: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -938,7 +938,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /mnt/d/Downloads/Asl/src/parser/Asl.g:
+            	    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -979,7 +979,7 @@ public class AslLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:198:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:198:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1009,13 +1009,13 @@ public class AslLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // /mnt/d/Downloads/Asl/src/parser/Asl.g:198:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:198:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
                     {
                     match("//"); 
 
 
 
-                    // /mnt/d/Downloads/Asl/src/parser/Asl.g:198:16: (~ ( '\\n' | '\\r' ) )*
+                    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:198:16: (~ ( '\\n' | '\\r' ) )*
                     loop3:
                     do {
                         int alt3=2;
@@ -1028,7 +1028,7 @@ public class AslLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // /mnt/d/Downloads/Asl/src/parser/Asl.g:
+                    	    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:
                     	    {
                     	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) {
                     	        input.consume();
@@ -1049,7 +1049,7 @@ public class AslLexer extends Lexer {
                     } while (true);
 
 
-                    // /mnt/d/Downloads/Asl/src/parser/Asl.g:198:30: ( '\\r' )?
+                    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:198:30: ( '\\r' )?
                     int alt4=2;
                     int LA4_0 = input.LA(1);
 
@@ -1058,7 +1058,7 @@ public class AslLexer extends Lexer {
                     }
                     switch (alt4) {
                         case 1 :
-                            // /mnt/d/Downloads/Asl/src/parser/Asl.g:198:30: '\\r'
+                            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:198:30: '\\r'
                             {
                             match('\r'); 
 
@@ -1075,13 +1075,13 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /mnt/d/Downloads/Asl/src/parser/Asl.g:199:8: '/*' ( options {greedy=false; } : . )* '*/'
+                    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:199:8: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
 
 
-                    // /mnt/d/Downloads/Asl/src/parser/Asl.g:199:13: ( options {greedy=false; } : . )*
+                    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:199:13: ( options {greedy=false; } : . )*
                     loop5:
                     do {
                         int alt5=2;
@@ -1106,7 +1106,7 @@ public class AslLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // /mnt/d/Downloads/Asl/src/parser/Asl.g:199:41: .
+                    	    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:199:41: .
                     	    {
                     	    matchAny(); 
 
@@ -1143,12 +1143,12 @@ public class AslLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:203:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:203:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:203:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:203:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
 
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:203:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:203:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
             loop7:
             do {
                 int alt7=3;
@@ -1164,7 +1164,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // /mnt/d/Downloads/Asl/src/parser/Asl.g:203:18: ESC_SEQ
+            	    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:203:18: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
 
@@ -1172,7 +1172,7 @@ public class AslLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /mnt/d/Downloads/Asl/src/parser/Asl.g:203:28: ~ ( '\\\\' | '\"' )
+            	    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:203:28: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -1209,8 +1209,8 @@ public class AslLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:209:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:209:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:209:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:209:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
             {
             match('\\'); 
 
@@ -1239,8 +1239,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:212:6: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // /mnt/d/Downloads/Asl/src/parser/Asl.g:212:8: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:212:6: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:212:8: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -1266,12 +1266,12 @@ public class AslLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:8: ( T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | ID | INT | COMMENT | STRING | WS )
+        // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:8: ( T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | ID | INT | COMMENT | STRING | WS )
         int alt8=40;
         alt8 = dfa8.predict(input);
         switch (alt8) {
             case 1 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:10: T__48
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:10: T__48
                 {
                 mT__48(); 
 
@@ -1279,7 +1279,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:16: T__49
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:16: T__49
                 {
                 mT__49(); 
 
@@ -1287,7 +1287,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:22: T__50
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:22: T__50
                 {
                 mT__50(); 
 
@@ -1295,7 +1295,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:28: T__51
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:28: T__51
                 {
                 mT__51(); 
 
@@ -1303,7 +1303,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:34: T__52
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:34: T__52
                 {
                 mT__52(); 
 
@@ -1311,7 +1311,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:40: T__53
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:40: T__53
                 {
                 mT__53(); 
 
@@ -1319,7 +1319,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:46: T__54
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:46: T__54
                 {
                 mT__54(); 
 
@@ -1327,7 +1327,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 8 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:52: EQUAL
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:52: EQUAL
                 {
                 mEQUAL(); 
 
@@ -1335,7 +1335,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 9 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:58: NOT_EQUAL
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:58: NOT_EQUAL
                 {
                 mNOT_EQUAL(); 
 
@@ -1343,7 +1343,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 10 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:68: LT
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:68: LT
                 {
                 mLT(); 
 
@@ -1351,7 +1351,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:71: LE
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:71: LE
                 {
                 mLE(); 
 
@@ -1359,7 +1359,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 12 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:74: GT
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:74: GT
                 {
                 mGT(); 
 
@@ -1367,7 +1367,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 13 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:77: GE
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:77: GE
                 {
                 mGE(); 
 
@@ -1375,7 +1375,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 14 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:80: PLUS
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:80: PLUS
                 {
                 mPLUS(); 
 
@@ -1383,7 +1383,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 15 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:85: MINUS
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:85: MINUS
                 {
                 mMINUS(); 
 
@@ -1391,7 +1391,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 16 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:91: MUL
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:91: MUL
                 {
                 mMUL(); 
 
@@ -1399,7 +1399,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:95: DIV
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:95: DIV
                 {
                 mDIV(); 
 
@@ -1407,7 +1407,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 18 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:99: MOD
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:99: MOD
                 {
                 mMOD(); 
 
@@ -1415,7 +1415,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 19 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:103: NOT
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:103: NOT
                 {
                 mNOT(); 
 
@@ -1423,7 +1423,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:107: AND
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:107: AND
                 {
                 mAND(); 
 
@@ -1431,7 +1431,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:111: OR
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:111: OR
                 {
                 mOR(); 
 
@@ -1439,7 +1439,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:114: IF
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:114: IF
                 {
                 mIF(); 
 
@@ -1447,7 +1447,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 23 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:117: THEN
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:117: THEN
                 {
                 mTHEN(); 
 
@@ -1455,7 +1455,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:122: ELSE
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:122: ELSE
                 {
                 mELSE(); 
 
@@ -1463,7 +1463,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:127: ENDIF
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:127: ENDIF
                 {
                 mENDIF(); 
 
@@ -1471,7 +1471,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 26 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:133: WHILE
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:133: WHILE
                 {
                 mWHILE(); 
 
@@ -1479,7 +1479,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 27 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:139: DO
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:139: DO
                 {
                 mDO(); 
 
@@ -1487,7 +1487,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 28 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:142: ENDWHILE
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:142: ENDWHILE
                 {
                 mENDWHILE(); 
 
@@ -1495,7 +1495,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 29 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:151: FUNC
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:151: FUNC
                 {
                 mFUNC(); 
 
@@ -1503,7 +1503,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 30 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:156: ENDFUNC
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:156: ENDFUNC
                 {
                 mENDFUNC(); 
 
@@ -1511,7 +1511,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 31 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:164: RETURN
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:164: RETURN
                 {
                 mRETURN(); 
 
@@ -1519,7 +1519,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 32 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:171: READ
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:171: READ
                 {
                 mREAD(); 
 
@@ -1527,7 +1527,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 33 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:176: WRITE
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:176: WRITE
                 {
                 mWRITE(); 
 
@@ -1535,7 +1535,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 34 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:182: TRUE
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:182: TRUE
                 {
                 mTRUE(); 
 
@@ -1543,7 +1543,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 35 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:187: FALSE
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:187: FALSE
                 {
                 mFALSE(); 
 
@@ -1551,7 +1551,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 36 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:193: ID
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:193: ID
                 {
                 mID(); 
 
@@ -1559,7 +1559,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 37 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:196: INT
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:196: INT
                 {
                 mINT(); 
 
@@ -1567,7 +1567,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 38 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:200: COMMENT
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:200: COMMENT
                 {
                 mCOMMENT(); 
 
@@ -1575,7 +1575,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 39 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:208: STRING
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:208: STRING
                 {
                 mSTRING(); 
 
@@ -1583,7 +1583,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 40 :
-                // /mnt/d/Downloads/Asl/src/parser/Asl.g:1:215: WS
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:215: WS
                 {
                 mWS(); 
 

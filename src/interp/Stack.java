@@ -69,7 +69,7 @@ public class Stack {
 
     /** Creates a new activation record on the top of the stack */
     public void pushActivationRecord(String name, int line) {
-        CurrentAR = new HashMap<String,Data>();
+        CurrentAR = new HashMap<>();
         Stack.addLast (CurrentAR);
         StackTrace.addLast (new StackTraceItem(name, line));
     }
@@ -112,8 +112,8 @@ public class Stack {
         }
     }
 
-    public void defineArray(String name, ArrayList<Integer> array) {
-        CurrentAR.get(name).setData(new Data(array));
+    public void defineArray(String name, Data array) {
+        CurrentAR.put(name, array);
     }
 
     /** Gets the value of the variable. The value is represented as

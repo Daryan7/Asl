@@ -76,7 +76,7 @@ paramlist: param (','! param)*
 // Parameters with & as prefix are passed by reference
 // Only one node with the name of the parameter is created
 param   :   '&' id=ID -> ^(PREF[$id, $id.text])
-        |   var -> ^(PVALUE var)
+        |   id=ID -> ^(PVALUE[$id, $id.text])
         ;
 
 // A list of instructions, all of them gouped in a subtree

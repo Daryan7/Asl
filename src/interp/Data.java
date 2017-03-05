@@ -66,7 +66,10 @@ public class Data {
     Data() {type = Type.VOID; }
 
     /** Copy constructor */
-    Data(Data d) { type = d.type; value = d.value; }
+    Data(Data d) {
+        type = d.type;
+        value = d.value;
+    }
 
     /** Returns the type of data */
     public Type getType() { return type; }

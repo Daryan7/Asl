@@ -177,13 +177,12 @@ public class Interp {
 
         // Track line number
         setLineNumber(f);
-         
+
         // Copy the parameters to the current activation record
         for (int i = 0; i < nparam; ++i) {
-            String param_name = p.getChild(i).getChild(0).getText();
-            if (p.getChild(i).getChild(0).getType() == AslLexer.VECTOR) {
-                ArrayList<Integer> arrayList = Arg_values.get(i).getArrayValue();
-                Stack.defineArray(param_name, arrayList);
+            String param_name = p.getChild(i).getText();
+            if (Arg_values.get(i).isArray()) {
+                Stack.defineArray(param_name, Arg_values.get(i));
             }
             else Stack.defineVariable(param_name, Arg_values.get(i));
         }
@@ -336,9 +335,10 @@ public class Interp {
                 Data index = evaluateExpression(t.getChild(1));
                 value = new Data(value.getArrayValue().get(index.getIntegerValue()));
                 break;
-
             case AslLexer.ID:
-                value = new Data(Stack.getVariable(t.getText()));
+                Data data = Stack.getVariable(t.getText());
+                if (data.isArray()) value = data;
+                else value = new Data(data);
                 break;
             // An integer literal
             case AslLexer.INT:
@@ -511,8 +511,7 @@ public class Interp {
             setLineNumber(a);
             if (p.getType() == AslLexer.PVALUE) {
                 // Pass by value: evaluate the expression
-                if (p.getChild(0).getType() == AslLexer.ID) Params.add(i, evaluateExpression(a));
-                else Params.add(i, Stack.getVariable(p.getChild(0).getChild(0).getText()));
+                Params.add(i, evaluateExpression(a));
             } else {
                 // Pass by reference: check that it is a variable
                 if (a.getType() != AslLexer.ID) {
@@ -520,6 +519,7 @@ public class Interp {
                 }
                 // Find the variable and pass the reference
                 Data v = Stack.getVariable(a.getText());
+                if (v.isArray()) throw new RuntimeException("Arrays are always passed as reference");
                 Params.add(i,v);
             }
         }
