@@ -94,23 +94,24 @@ public class Stack {
         else d.setData(value); // Use the previous data 
     }
 
-    public void defineArray(String name, Data value, int size) {
+    public void defineArray(String name, Data value, int index) {
         Data d = CurrentAR.get(name);
         if (d == null) {
-            ArrayList<Integer> arrayList = new ArrayList<>(Collections.nCopies(size, 0));
-            arrayList.set(size-1, value.getIntegerValue());
-            System.out.println(arrayList.size());
-            CurrentAR.put(name, new Data(arrayList));
+            ArrayList<Integer> arrayList = new ArrayList<>(Collections.nCopies(index+1, 0));
+            arrayList.set(index, value.getIntegerValue());
+            CurrentAR.put(name, new Data(arrayList, value.getType()));
         }
-        else if (d.isArray()) {
+        else if (d.isArray() && value.getType() == d.getType()) {
             ArrayList<Integer> arrayList = d.getArrayValue();
-            arrayList.addAll(Collections.nCopies(size, 0));
-            arrayList.set(size-1, value.getIntegerValue());
+            if (index >= arrayList.size()) {
+                arrayList.addAll(Collections.nCopies(index - arrayList.size() + 1, 0));
+            }
+            arrayList.set(index, value.getValue());
         }
         else {
-            ArrayList<Integer> arrayList = new ArrayList<>(Collections.nCopies(size, 0));
-            arrayList.set(size-1, value.getIntegerValue());
-            d.setData(new Data(arrayList));
+            ArrayList<Integer> arrayList = new ArrayList<>(Collections.nCopies(index+1, 0));
+            arrayList.set(index, value.getValue());
+            d.setData(new Data(arrayList, value.getType()));
         }
     }
 

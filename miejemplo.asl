@@ -4,7 +4,6 @@ endfunc
 
 func main()
     A[3] = 3;
-    A[4] = 5;
-    x = A[5];
-    hola(A, 2);
+    A[4] = 3;
+    hola(A, 4);
 endfunc

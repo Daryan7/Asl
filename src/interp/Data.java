@@ -44,7 +44,7 @@ import java.util.ArrayList;
 
 public class Data {
     /** Types of data */
-    public enum Type {VOID, BOOLEAN, INTEGER, ARRAY;}
+    public enum Type {VOID, BOOLEAN, INTEGER;}
 
     /** Type of data*/
     private Type type;
@@ -52,9 +52,12 @@ public class Data {
     /** Value of the data */
     private int value;
 
-    private ArrayList<Integer> array;
+    private ArrayList<Integer> array = null;
 
-    Data(ArrayList<Integer> array) {type = Type.ARRAY; this.array = array;}
+    Data(ArrayList<Integer> array, Type arrayType) {
+        type = arrayType;
+        this.array = array;
+    }
 
     /** Constructor for integers */
     Data(int v) { type = Type.INTEGER; value = v; }
@@ -75,27 +78,27 @@ public class Data {
     public Type getType() { return type; }
 
     /** Indicates whether the data is Boolean */
-    public boolean isBoolean() { return type == Type.BOOLEAN; }
+    public boolean isBoolean() { return type == Type.BOOLEAN && array == null; }
 
     /** Indicates whether the data is integer */
-    public boolean isInteger() { return type == Type.INTEGER; }
+    public boolean isInteger() { return type == Type.INTEGER && array == null; }
 
     /** Indicates whether the data is void */
     public boolean isVoid() { return type == Type.VOID; }
 
-    public boolean isArray() { return type == Type.ARRAY; }
+    public boolean isArray() {return array != null;}
 
     /**
      * Gets the value of an integer data. The method asserts that
      * the data is an integer.
      */
     public int getIntegerValue() {
-        assert type == Type.INTEGER;
+        assert type == Type.INTEGER && array == null;
         return value;
     }
 
     public ArrayList<Integer> getArrayValue() {
-        assert type == Type.ARRAY;
+        assert array != null;
         return array;
     }
 
@@ -104,9 +107,11 @@ public class Data {
      * the data is a Boolean.
      */
     public boolean getBooleanValue() {
-        assert type == Type.BOOLEAN;
+        assert type == Type.BOOLEAN && array == null;
         return value == 1;
     }
+
+    public int getValue() {return value;}
 
     /** Defines a Boolean value for the data */
     public void setValue(boolean b) { type = Type.BOOLEAN; value = b ? 1 : 0; }
@@ -119,8 +124,8 @@ public class Data {
     
     /** Returns a string representing the data in textual form. */
     public String toString() {
+        if (array != null) return "array";
         if (type == Type.BOOLEAN) return value == 1 ? "true" : "false";
-        else if (type == Type.ARRAY) {return "array";}
         return Integer.toString(value);
     }
     

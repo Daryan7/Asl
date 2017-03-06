@@ -244,9 +244,7 @@ public class Interp {
                 if (t.getChild(0).getType() == AslLexer.VECTOR) {
                     Data result = evaluateExpression(t.getChild(0).getChild(1));
                     if (!result.isInteger()) throw new RuntimeException("Array index must be an integer value");
-                    int index = result.getIntegerValue();
-                    //TODO: cambiar el modo de definir vectores, hay que hacerlo en el intérprete
-                    Stack.defineArray(t.getChild(0).getChild(0).getText(), value, evaluateExpression(t.getChild(0).getChild(1)).getIntegerValue());
+                    Stack.defineArray(t.getChild(0).getChild(0).getText(), value, result.getIntegerValue());
                 }
                 else Stack.defineVariable (t.getChild(0).getText(), value);
                 return null;
