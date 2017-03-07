@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g 2017-03-05 13:40:51
+// $ANTLR 3.4 C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g 2017-03-07 18:56:33
 
 package parser;
 import interp.AslTree;
@@ -2939,7 +2939,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "var"
-    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:161:1: var : ( ID | ID '[' expr ']' -> ^( VECTOR ID expr ) );
+    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:161:1: var : ( ID |id= ID '[' expr ']' -> ^( VECTOR[$id.text] expr ) );
     public final AslParser.var_return var() throws RecognitionException {
         AslParser.var_return retval = new AslParser.var_return();
         retval.start = input.LT(1);
@@ -2947,23 +2947,23 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
+        Token id=null;
         Token ID86=null;
-        Token ID87=null;
-        Token char_literal88=null;
-        Token char_literal90=null;
-        AslParser.expr_return expr89 =null;
+        Token char_literal87=null;
+        Token char_literal89=null;
+        AslParser.expr_return expr88 =null;
 
 
+        AslTree id_tree=null;
         AslTree ID86_tree=null;
-        AslTree ID87_tree=null;
-        AslTree char_literal88_tree=null;
-        AslTree char_literal90_tree=null;
+        AslTree char_literal87_tree=null;
+        AslTree char_literal89_tree=null;
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleTokenStream stream_53=new RewriteRuleTokenStream(adaptor,"token 53");
         RewriteRuleTokenStream stream_54=new RewriteRuleTokenStream(adaptor,"token 54");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:161:5: ( ID | ID '[' expr ']' -> ^( VECTOR ID expr ) )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:161:5: ( ID |id= ID '[' expr ']' -> ^( VECTOR[$id.text] expr ) )
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -3008,29 +3008,29 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:162:7: ID '[' expr ']'
+                    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:162:7: id= ID '[' expr ']'
                     {
-                    ID87=(Token)match(input,ID,FOLLOW_ID_in_var1185);  
-                    stream_ID.add(ID87);
+                    id=(Token)match(input,ID,FOLLOW_ID_in_var1187);  
+                    stream_ID.add(id);
 
 
-                    char_literal88=(Token)match(input,53,FOLLOW_53_in_var1186);  
-                    stream_53.add(char_literal88);
+                    char_literal87=(Token)match(input,53,FOLLOW_53_in_var1188);  
+                    stream_53.add(char_literal87);
 
 
-                    pushFollow(FOLLOW_expr_in_var1187);
-                    expr89=expr();
+                    pushFollow(FOLLOW_expr_in_var1189);
+                    expr88=expr();
 
                     state._fsp--;
 
-                    stream_expr.add(expr89.getTree());
+                    stream_expr.add(expr88.getTree());
 
-                    char_literal90=(Token)match(input,54,FOLLOW_54_in_var1188);  
-                    stream_54.add(char_literal90);
+                    char_literal89=(Token)match(input,54,FOLLOW_54_in_var1190);  
+                    stream_54.add(char_literal89);
 
 
                     // AST REWRITE
-                    // elements: expr, ID
+                    // elements: expr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -3040,18 +3040,14 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (AslTree)adaptor.nil();
-                    // 162:20: -> ^( VECTOR ID expr )
+                    // 162:23: -> ^( VECTOR[$id.text] expr )
                     {
-                        // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:162:23: ^( VECTOR ID expr )
+                        // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:162:26: ^( VECTOR[$id.text] expr )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
-                        (AslTree)adaptor.create(VECTOR, "VECTOR")
+                        (AslTree)adaptor.create(VECTOR, (id!=null?id.getText():null))
                         , root_1);
-
-                        adaptor.addChild(root_1, 
-                        stream_ID.nextNode()
-                        );
 
                         adaptor.addChild(root_1, stream_expr.nextTree());
 
@@ -3184,9 +3180,9 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_51_in_expr_list1155 = new BitSet(new long[]{0x0002081121420000L});
     public static final BitSet FOLLOW_expr_in_expr_list1158 = new BitSet(new long[]{0x0008000000000002L});
     public static final BitSet FOLLOW_ID_in_var1177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_var1185 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_53_in_var1186 = new BitSet(new long[]{0x0002081121420000L});
-    public static final BitSet FOLLOW_expr_in_var1187 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_54_in_var1188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_var1187 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_53_in_var1188 = new BitSet(new long[]{0x0002081121420000L});
+    public static final BitSet FOLLOW_expr_in_var1189 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_54_in_var1190 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -120,7 +120,15 @@ public class Data {
     public void setValue(int v) { type = Type.INTEGER; value = v; }
 
     /** Copies the value from another data */
-    public void setData(Data d) { type = d.type; value = d.value; }
+    public void setData(Data d) {
+        type = d.type;
+        value = d.value;
+    }
+
+    public void setArray(ArrayList<Integer> array, Type type) {
+        this.type = type;
+        this.array = array;
+    }
     
     /** Returns a string representing the data in textual form. */
     public String toString() {

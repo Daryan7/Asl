@@ -242,9 +242,9 @@ public class Interp {
             case AslLexer.ASSIGN:
                 value = evaluateExpression(t.getChild(1));
                 if (t.getChild(0).getType() == AslLexer.VECTOR) {
-                    Data result = evaluateExpression(t.getChild(0).getChild(1));
+                    Data result = evaluateExpression(t.getChild(0).getChild(0));
                     if (!result.isInteger()) throw new RuntimeException("Array index must be an integer value");
-                    Stack.defineArray(t.getChild(0).getChild(0).getText(), value, result.getIntegerValue());
+                    Stack.defineArray(t.getChild(0).getText(), value, result.getIntegerValue());
                 }
                 else Stack.defineVariable (t.getChild(0).getText(), value);
                 return null;
@@ -327,15 +327,17 @@ public class Interp {
         int previous_line = lineNumber();
         setLineNumber(t);
         int type = t.getType();
-
         Data value = null;
         // Atoms
         switch (type) {
             // A variable
             case AslLexer.VECTOR:
-                value = Stack.getVariable(t.getChild(0).getText());
-                Data index = evaluateExpression(t.getChild(1));
-                value = new Data(value.getArrayValue().get(index.getIntegerValue()));
+                value = Stack.getVariable(t.getText());
+                Data index = evaluateExpression(t.getChild(0));
+                Data.Type arrayType = value.getType();
+                int val = value.getArrayValue().get(index.getIntegerValue());
+                if (arrayType == Data.Type.BOOLEAN) value = new Data(val != 0);
+                else value = new Data(val);
                 break;
             case AslLexer.ID:
                 Data data = Stack.getVariable(t.getText());
@@ -516,7 +518,7 @@ public class Interp {
                 Params.add(i, evaluateExpression(a));
             } else {
                 // Pass by reference: check that it is a variable
-                if (a.getType() != AslLexer.ID) {
+                if (a.getType() != AslLexer.ID && a.getType() != AslLexer.VECTOR) {
                     throw new RuntimeException("Wrong argument for pass by reference");
                 }
                 // Find the variable and pass the reference

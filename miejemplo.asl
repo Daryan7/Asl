@@ -4,6 +4,6 @@ endfunc
 
 func main()
     A[3] = 3;
-    A[4] = 3;
-    hola(A, 4);
+    A[4] = true;
+    hola(A[4], 4);
 endfunc

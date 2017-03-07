@@ -111,7 +111,7 @@ public class Stack {
         else {
             ArrayList<Integer> arrayList = new ArrayList<>(Collections.nCopies(index+1, 0));
             arrayList.set(index, value.getValue());
-            d.setData(new Data(arrayList, value.getType()));
+            d.setArray(arrayList, value.getType());
         }
     }
 

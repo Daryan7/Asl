@@ -159,7 +159,7 @@ expr_list:  expr (','! expr)*
         ;
 
 var : ID
-    | ID'['expr']' -> ^(VECTOR ID expr)
+    | id=ID'['expr']' -> ^(VECTOR[$id.text] expr)
     ;
 
 // Basic tokens
