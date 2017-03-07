@@ -1,5 +1,5 @@
 func hola(A, n)
-    write A[n];
+    write A;
 endfunc
 
 func main()
