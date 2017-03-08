@@ -331,7 +331,7 @@ public class Interp {
         // Atoms
         switch (type) {
             // A variable
-            case AslLexer.VECTOR:
+            case AslLexer.VECTOR: {
                 value = Stack.getVariable(t.getText());
                 Data index = evaluateExpression(t.getChild(0));
                 Data.Type arrayType = value.getType();
@@ -339,6 +339,7 @@ public class Interp {
                 if (arrayType == Data.Type.BOOLEAN) value = new Data(val != 0);
                 else value = new Data(val);
                 break;
+            }
             case AslLexer.ID:
                 Data data = Stack.getVariable(t.getText());
                 if (data.isArray()) value = data;
@@ -356,7 +357,17 @@ public class Interp {
             case AslLexer.FUNCALL:
                 value = executeFunction(t.getChild(0).getText(), t.getChild(1));
                 assert value != null;
-                if (value.isVoid()) {
+                if (t.getChildCount() > 2) {
+                    if (value.isArray()) {
+                        Data index = evaluateExpression(t.getChild(2));
+                        Data.Type arrayType = value.getType();
+                        int val = value.getArrayValue().get(index.getIntegerValue());
+                        if (arrayType == Data.Type.BOOLEAN) value = new Data(val != 0);
+                        else value = new Data(val);
+                    }
+                    else throw new RuntimeException("Function call " + t.getChild(0).getText() + " did not return a vector");
+                }
+                else if (value.isVoid()) {
                     throw new RuntimeException ("function expected to return a value");
                 }
                 break;

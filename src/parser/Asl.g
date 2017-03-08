@@ -45,6 +45,7 @@ tokens {
     PVALUE;     // Parameter by value in the list of parameters
     PREF;       // Parameter by reference in the list of parameters
     VECTOR;
+    FUNCVEC;
 }
 
 @header {
@@ -151,7 +152,7 @@ atom    :   var
         ;
 
 // A function call has a lits of arguments in parenthesis (possibly empty)
-funcall :   ID '(' expr_list? ')' -> ^(FUNCALL ID ^(ARGLIST expr_list?))
+funcall :   ID '(' expr_list? ')'('['expr']')? -> ^(FUNCALL ID ^(ARGLIST expr_list?) expr?)
         ;
 
 // A list of expressions separated by commas
