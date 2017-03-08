@@ -279,7 +279,7 @@ public class Interp {
             // in case of a format error.
             case AslLexer.READ:
                 String token = null;
-                Data val = new Data(0);;
+                Data val = new Data(0);
                 try {
                     token = stdin.next();
                     val.setValue(Integer.parseInt(token)); 
