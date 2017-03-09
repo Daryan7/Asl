@@ -46,6 +46,7 @@ tokens {
     PREF;       // Parameter by reference in the list of parameters
     VECTOR;
     FUNCVEC;
+    TERNARY;
 }
 
 @header {
@@ -123,7 +124,9 @@ write	:   WRITE^ (expr | STRING )
         ;
 
 // Grammar for expressions with boolean, relational and aritmetic operators
-expr    :   boolterm (OR^ boolterm)*
+expr    :   orexpr ('?'^ orexpr ':'! orexpr)?;
+
+orexpr  :   boolterm (OR^ boolterm)*
         ;
 
 boolterm:   boolfact (AND^ boolfact)*
@@ -190,7 +193,7 @@ ENDFUNC	: 'endfunc' ;
 RETURN	: 'return' ;
 READ	: 'read' ;
 WRITE	: 'write' ;
-TRUE    	: 'true' ;
+TRUE    : 'true' ;
 FALSE  	: 'false';
 ID  	:('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 INT 	:'0'..'9'+ ;
