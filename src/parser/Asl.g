@@ -120,11 +120,11 @@ read	:	READ^ var
         ;
 
 // Write an expression or a string
-write	:   WRITE^ (expr | STRING )
+write	:   WRITE^ expr
         ;
 
 // Grammar for expressions with boolean, relational and aritmetic operators
-expr    :   orexpr ('?'^ orexpr ':'! orexpr)?;
+expr    :   orexpr (QUESTION^ expr ':'! expr)?;
 
 orexpr  :   boolterm (OR^ boolterm)*
         ;
@@ -148,6 +148,7 @@ factor  :   (NOT^ | PLUS^ | MINUS^)? atom
 // An atom can also be a function call or another expression
 // in parenthesis
 atom    :   var
+        |   STRING
         |   INT
         |   (b=TRUE | b=FALSE)  -> ^(BOOLEAN[$b,$b.text])
         |   funcall
@@ -167,6 +168,7 @@ var : ID
     ;
 
 // Basic tokens
+QUESTION : '?';
 EQUAL	: '=' ;
 NOT_EQUAL: 	'!=' ;
 LT	: '<' ;

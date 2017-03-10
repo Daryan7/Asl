@@ -331,6 +331,13 @@ public class Interp {
         // Atoms
         switch (type) {
             // A variable
+            case AslLexer.QUESTION:
+                value = evaluateExpression(t.getChild(0));
+                if (!value.isBoolean()) throw new RuntimeException("First operand of ternary expression must be of boolean type, but returned " + value.getType().name());
+                if (value.getBooleanValue()) {
+                    return evaluateExpression(t.getChild(1));
+                }
+                return evaluateExpression(t.getChild(2));
             case AslLexer.VECTOR: {
                 value = Stack.getVariable(t.getText());
                 Data index = evaluateExpression(t.getChild(0));
@@ -340,6 +347,8 @@ public class Interp {
                 else value = new Data(val);
                 break;
             }
+            case AslLexer.STRING:
+                return new Data(t.getStringValue());
             case AslLexer.ID:
                 Data data = Stack.getVariable(t.getText());
                 if (data.isArray()) value = data;
@@ -417,16 +426,21 @@ public class Interp {
                 }
                 value = value.evaluateRelational(type, value2);
                 break;
-
             // Arithmetic operators
             case AslLexer.PLUS:
+                value2 = evaluateExpression(t.getChild(1));
+                if ((value.isString() && value2.isString()) || (value.isInteger() && value2.isInteger())) {
+                    value.evaluateOperator(type, value2);
+                }
+                else throw new RuntimeException("Expecting string or numerical expression");
+                break;
             case AslLexer.MINUS:
             case AslLexer.MUL:
             case AslLexer.DIV:
             case AslLexer.MOD:
                 value2 = evaluateExpression(t.getChild(1));
-                checkInteger(value); checkInteger(value2);
-                value.evaluateArithmetic(type, value2);
+                checkInteger(value);checkInteger(value2);
+                value.evaluateOperator(type, value2);
                 break;
 
             // Boolean operators

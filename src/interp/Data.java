@@ -44,13 +44,14 @@ import java.util.ArrayList;
 
 public class Data {
     /** Types of data */
-    public enum Type {VOID, BOOLEAN, INTEGER;}
+    public enum Type {VOID, BOOLEAN, INTEGER, STRING;}
 
     /** Type of data*/
     private Type type;
 
     /** Value of the data */
     private int value;
+    private String string;
 
     private ArrayList<Integer> array = null;
 
@@ -65,13 +66,21 @@ public class Data {
     /** Constructor for Booleans */
     Data(boolean b) { type = Type.BOOLEAN; value = b ? 1 : 0; }
 
+    Data(String s) {
+        type = Type.STRING;
+        string = s;
+    }
+
     /** Constructor for void data */
     Data() {type = Type.VOID; }
 
     /** Copy constructor */
     Data(Data d) {
         type = d.type;
-        value = d.value;
+        if (type == Type.STRING) {
+            string = d.string;
+        }
+        else value = d.value;
     }
 
     /** Returns the type of data */
@@ -82,6 +91,10 @@ public class Data {
 
     /** Indicates whether the data is integer */
     public boolean isInteger() { return type == Type.INTEGER && array == null; }
+
+    public boolean isString() {
+        return type == Type.STRING && array == null;
+    }
 
     /** Indicates whether the data is void */
     public boolean isVoid() { return type == Type.VOID; }
@@ -95,6 +108,11 @@ public class Data {
     public int getIntegerValue() {
         assert type == Type.INTEGER && array == null;
         return value;
+    }
+
+    public String getStringValue() {
+        assert type == Type.STRING;
+        return string;
     }
 
     public ArrayList<Integer> getArrayValue() {
@@ -122,7 +140,10 @@ public class Data {
     /** Copies the value from another data */
     public void setData(Data d) {
         type = d.type;
-        value = d.value;
+        if (type == Type.STRING) {
+            string = d.string;
+        }
+        else value = d.value;
     }
 
     public void setArray(ArrayList<Integer> array, Type type) {
@@ -134,6 +155,7 @@ public class Data {
     public String toString() {
         if (array != null) return "array";
         if (type == Type.BOOLEAN) return value == 1 ? "true" : "false";
+        if (type == Type.STRING) return string;
         return Integer.toString(value);
     }
     
@@ -151,16 +173,28 @@ public class Data {
      * @param op Type of operator (token).
      * @param d Second operand.
      */
-     
-    public void evaluateArithmetic (int op, Data d) {
-        assert type == Type.INTEGER && d.type == Type.INTEGER;
-        switch (op) {
-            case AslLexer.PLUS: value += d.value; break;
-            case AslLexer.MINUS: value -= d.value; break;
-            case AslLexer.MUL: value *= d.value; break;
-            case AslLexer.DIV: checkDivZero(d); value /= d.value; break;
-            case AslLexer.MOD: checkDivZero(d); value %= d.value; break;
-            default: assert false;
+    public void evaluateOperator(int op, Data d) {
+        assert type == d.type;
+        switch (type) {
+            case INTEGER:
+                switch (op) {
+                    case AslLexer.PLUS: value += d.value; break;
+                    case AslLexer.MINUS: value -= d.value; break;
+                    case AslLexer.MUL: value *= d.value; break;
+                    case AslLexer.DIV: checkDivZero(d); value /= d.value; break;
+                    case AslLexer.MOD: checkDivZero(d); value %= d.value; break;
+                    default: assert false;
+                }
+                break;
+            case STRING:
+                switch (op) {
+                    case AslLexer.PLUS:
+                        string += d.string;
+                        break;
+                    default: assert false;
+                }
+                break;
+            default:assert false;
         }
     }
 
@@ -171,7 +205,7 @@ public class Data {
      * @return A Boolean data with the value of the expression.
      */
     public Data evaluateRelational (int op, Data d) {
-        assert type != Type.VOID && type == d.type;
+        assert type != Type.VOID && type != Type.STRING && array == null  && type == d.type;
         switch (op) {
             case AslLexer.EQUAL: return new Data(value == d.value);
             case AslLexer.NOT_EQUAL: return new Data(value != d.value);
