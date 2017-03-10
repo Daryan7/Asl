@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g 2017-03-10 12:31:00
+// $ANTLR 3.4 C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g 2017-03-10 16:44:24
 
 package parser;
 
@@ -11,7 +11,6 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class AslLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__51=51;
     public static final int T__52=52;
     public static final int T__53=53;
     public static final int T__54=54;
@@ -19,6 +18,7 @@ public class AslLexer extends Lexer {
     public static final int T__56=56;
     public static final int T__57=57;
     public static final int T__58=58;
+    public static final int T__59=59;
     public static final int AND=4;
     public static final int ARGLIST=5;
     public static final int ASSIGN=6;
@@ -32,40 +32,41 @@ public class AslLexer extends Lexer {
     public static final int ENDWHILE=14;
     public static final int EQUAL=15;
     public static final int ESC_SEQ=16;
-    public static final int FALSE=17;
-    public static final int FUNC=18;
-    public static final int FUNCALL=19;
-    public static final int FUNCVEC=20;
-    public static final int GE=21;
-    public static final int GT=22;
-    public static final int ID=23;
-    public static final int IF=24;
-    public static final int INT=25;
-    public static final int LE=26;
-    public static final int LIST_FUNCTIONS=27;
-    public static final int LIST_INSTR=28;
-    public static final int LT=29;
-    public static final int MINUS=30;
-    public static final int MOD=31;
-    public static final int MUL=32;
-    public static final int NOT=33;
-    public static final int NOT_EQUAL=34;
-    public static final int OR=35;
-    public static final int PARAMS=36;
-    public static final int PLUS=37;
-    public static final int PREF=38;
-    public static final int PVALUE=39;
-    public static final int QUESTION=40;
-    public static final int READ=41;
-    public static final int RETURN=42;
-    public static final int STRING=43;
-    public static final int TERNARY=44;
-    public static final int THEN=45;
-    public static final int TRUE=46;
-    public static final int VECTOR=47;
-    public static final int WHILE=48;
-    public static final int WRITE=49;
-    public static final int WS=50;
+    public static final int FACTORIAL=17;
+    public static final int FALSE=18;
+    public static final int FUNC=19;
+    public static final int FUNCALL=20;
+    public static final int FUNCVEC=21;
+    public static final int GE=22;
+    public static final int GT=23;
+    public static final int ID=24;
+    public static final int IF=25;
+    public static final int INT=26;
+    public static final int LE=27;
+    public static final int LIST_FUNCTIONS=28;
+    public static final int LIST_INSTR=29;
+    public static final int LT=30;
+    public static final int MINUS=31;
+    public static final int MOD=32;
+    public static final int MUL=33;
+    public static final int NOT=34;
+    public static final int NOT_EQUAL=35;
+    public static final int OR=36;
+    public static final int PARAMS=37;
+    public static final int PLUS=38;
+    public static final int PREF=39;
+    public static final int PVALUE=40;
+    public static final int QUESTION=41;
+    public static final int READ=42;
+    public static final int RETURN=43;
+    public static final int STRING=44;
+    public static final int TERNARY=45;
+    public static final int THEN=46;
+    public static final int TRUE=47;
+    public static final int VECTOR=48;
+    public static final int WHILE=49;
+    public static final int WRITE=50;
+    public static final int WS=51;
 
     // delegates
     // delegators
@@ -82,36 +83,15 @@ public class AslLexer extends Lexer {
     }
     public String getGrammarFileName() { return "C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g"; }
 
-    // $ANTLR start "T__51"
-    public final void mT__51() throws RecognitionException {
-        try {
-            int _type = T__51;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:6:7: ( '&' )
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:6:9: '&'
-            {
-            match('&'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__51"
-
     // $ANTLR start "T__52"
     public final void mT__52() throws RecognitionException {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:7:7: ( '(' )
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:7:9: '('
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:6:7: ( '&' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:6:9: '&'
             {
-            match('('); 
+            match('&'); 
 
             }
 
@@ -129,10 +109,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:8:7: ( ')' )
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:8:9: ')'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:7:7: ( '(' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:7:9: '('
             {
-            match(')'); 
+            match('('); 
 
             }
 
@@ -150,10 +130,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:9:7: ( ',' )
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:9:9: ','
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:8:7: ( ')' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:8:9: ')'
             {
-            match(','); 
+            match(')'); 
 
             }
 
@@ -171,10 +151,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:10:7: ( ':' )
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:10:9: ':'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:9:7: ( ',' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:9:9: ','
             {
-            match(':'); 
+            match(','); 
 
             }
 
@@ -192,10 +172,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:11:7: ( ';' )
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:11:9: ';'
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:10:7: ( ':' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:10:9: ':'
             {
-            match(';'); 
+            match(':'); 
 
             }
 
@@ -213,10 +193,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:12:7: ( '[' )
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:12:9: '['
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:11:7: ( ';' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:11:9: ';'
             {
-            match('['); 
+            match(';'); 
 
             }
 
@@ -234,6 +214,27 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:12:7: ( '[' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:12:9: '['
+            {
+            match('['); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__58"
+
+    // $ANTLR start "T__59"
+    public final void mT__59() throws RecognitionException {
+        try {
+            int _type = T__59;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:13:7: ( ']' )
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:13:9: ']'
             {
@@ -248,7 +249,28 @@ public class AslLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__58"
+    // $ANTLR end "T__59"
+
+    // $ANTLR start "FACTORIAL"
+    public final void mFACTORIAL() throws RecognitionException {
+        try {
+            int _type = FACTORIAL;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:171:11: ( '!' )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:171:13: '!'
+            {
+            match('!'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "FACTORIAL"
 
     // $ANTLR start "QUESTION"
     public final void mQUESTION() throws RecognitionException {
@@ -1312,340 +1334,348 @@ public class AslLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:8: ( T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | QUESTION | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | ID | INT | COMMENT | STRING | WS )
-        int alt8=42;
+        // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:8: ( T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | FACTORIAL | QUESTION | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | ID | INT | COMMENT | STRING | WS )
+        int alt8=43;
         alt8 = dfa8.predict(input);
         switch (alt8) {
             case 1 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:10: T__51
-                {
-                mT__51(); 
-
-
-                }
-                break;
-            case 2 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:16: T__52
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:10: T__52
                 {
                 mT__52(); 
 
 
                 }
                 break;
-            case 3 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:22: T__53
+            case 2 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:16: T__53
                 {
                 mT__53(); 
 
 
                 }
                 break;
-            case 4 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:28: T__54
+            case 3 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:22: T__54
                 {
                 mT__54(); 
 
 
                 }
                 break;
-            case 5 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:34: T__55
+            case 4 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:28: T__55
                 {
                 mT__55(); 
 
 
                 }
                 break;
-            case 6 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:40: T__56
+            case 5 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:34: T__56
                 {
                 mT__56(); 
 
 
                 }
                 break;
-            case 7 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:46: T__57
+            case 6 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:40: T__57
                 {
                 mT__57(); 
 
 
                 }
                 break;
-            case 8 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:52: T__58
+            case 7 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:46: T__58
                 {
                 mT__58(); 
 
 
                 }
                 break;
+            case 8 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:52: T__59
+                {
+                mT__59(); 
+
+
+                }
+                break;
             case 9 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:58: QUESTION
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:58: FACTORIAL
+                {
+                mFACTORIAL(); 
+
+
+                }
+                break;
+            case 10 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:68: QUESTION
                 {
                 mQUESTION(); 
 
 
                 }
                 break;
-            case 10 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:67: EQUAL
+            case 11 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:77: EQUAL
                 {
                 mEQUAL(); 
 
 
                 }
                 break;
-            case 11 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:73: NOT_EQUAL
+            case 12 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:83: NOT_EQUAL
                 {
                 mNOT_EQUAL(); 
 
 
                 }
                 break;
-            case 12 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:83: LT
+            case 13 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:93: LT
                 {
                 mLT(); 
 
 
                 }
                 break;
-            case 13 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:86: LE
+            case 14 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:96: LE
                 {
                 mLE(); 
 
 
                 }
                 break;
-            case 14 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:89: GT
+            case 15 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:99: GT
                 {
                 mGT(); 
 
 
                 }
                 break;
-            case 15 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:92: GE
+            case 16 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:102: GE
                 {
                 mGE(); 
 
 
                 }
                 break;
-            case 16 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:95: PLUS
+            case 17 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:105: PLUS
                 {
                 mPLUS(); 
 
 
                 }
                 break;
-            case 17 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:100: MINUS
+            case 18 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:110: MINUS
                 {
                 mMINUS(); 
 
 
                 }
                 break;
-            case 18 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:106: MUL
+            case 19 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:116: MUL
                 {
                 mMUL(); 
 
 
                 }
                 break;
-            case 19 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:110: DIV
+            case 20 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:120: DIV
                 {
                 mDIV(); 
 
 
                 }
                 break;
-            case 20 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:114: MOD
+            case 21 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:124: MOD
                 {
                 mMOD(); 
 
 
                 }
                 break;
-            case 21 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:118: NOT
+            case 22 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:128: NOT
                 {
                 mNOT(); 
 
 
                 }
                 break;
-            case 22 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:122: AND
+            case 23 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:132: AND
                 {
                 mAND(); 
 
 
                 }
                 break;
-            case 23 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:126: OR
+            case 24 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:136: OR
                 {
                 mOR(); 
 
 
                 }
                 break;
-            case 24 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:129: IF
+            case 25 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:139: IF
                 {
                 mIF(); 
 
 
                 }
                 break;
-            case 25 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:132: THEN
+            case 26 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:142: THEN
                 {
                 mTHEN(); 
 
 
                 }
                 break;
-            case 26 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:137: ELSE
+            case 27 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:147: ELSE
                 {
                 mELSE(); 
 
 
                 }
                 break;
-            case 27 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:142: ENDIF
+            case 28 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:152: ENDIF
                 {
                 mENDIF(); 
 
 
                 }
                 break;
-            case 28 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:148: WHILE
+            case 29 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:158: WHILE
                 {
                 mWHILE(); 
 
 
                 }
                 break;
-            case 29 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:154: DO
+            case 30 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:164: DO
                 {
                 mDO(); 
 
 
                 }
                 break;
-            case 30 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:157: ENDWHILE
+            case 31 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:167: ENDWHILE
                 {
                 mENDWHILE(); 
 
 
                 }
                 break;
-            case 31 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:166: FUNC
+            case 32 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:176: FUNC
                 {
                 mFUNC(); 
 
 
                 }
                 break;
-            case 32 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:171: ENDFUNC
+            case 33 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:181: ENDFUNC
                 {
                 mENDFUNC(); 
 
 
                 }
                 break;
-            case 33 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:179: RETURN
+            case 34 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:189: RETURN
                 {
                 mRETURN(); 
 
 
                 }
                 break;
-            case 34 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:186: READ
+            case 35 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:196: READ
                 {
                 mREAD(); 
 
 
                 }
                 break;
-            case 35 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:191: WRITE
+            case 36 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:201: WRITE
                 {
                 mWRITE(); 
 
 
                 }
                 break;
-            case 36 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:197: TRUE
+            case 37 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:207: TRUE
                 {
                 mTRUE(); 
 
 
                 }
                 break;
-            case 37 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:202: FALSE
+            case 38 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:212: FALSE
                 {
                 mFALSE(); 
 
 
                 }
                 break;
-            case 38 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:208: ID
+            case 39 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:218: ID
                 {
                 mID(); 
 
 
                 }
                 break;
-            case 39 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:211: INT
+            case 40 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:221: INT
                 {
                 mINT(); 
 
 
                 }
                 break;
-            case 40 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:215: COMMENT
+            case 41 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:225: COMMENT
                 {
                 mCOMMENT(); 
 
 
                 }
                 break;
-            case 41 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:223: STRING
+            case 42 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:233: STRING
                 {
                 mSTRING(); 
 
 
                 }
                 break;
-            case 42 :
-                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:230: WS
+            case 43 :
+                // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:1:240: WS
                 {
                 mWS(); 
 
@@ -1660,41 +1690,41 @@ public class AslLexer extends Lexer {
 
     protected DFA8 dfa8 = new DFA8(this);
     static final String DFA8_eotS =
-        "\14\uffff\1\42\1\44\3\uffff\1\46\1\uffff\12\35\12\uffff\2\35\1\67"+
-        "\1\70\6\35\1\77\3\35\1\104\1\105\2\uffff\6\35\1\uffff\4\35\2\uffff"+
-        "\1\122\1\123\1\124\5\35\1\132\2\35\1\135\3\uffff\1\136\2\35\1\141"+
-        "\1\142\1\uffff\1\143\1\35\2\uffff\2\35\3\uffff\1\147\1\35\1\151"+
-        "\1\uffff\1\152\2\uffff";
+        "\11\uffff\1\42\2\uffff\1\44\1\46\3\uffff\1\50\1\uffff\12\35\14\uffff"+
+        "\2\35\1\71\1\72\6\35\1\101\3\35\1\106\1\107\2\uffff\6\35\1\uffff"+
+        "\4\35\2\uffff\1\124\1\125\1\126\5\35\1\134\2\35\1\137\3\uffff\1"+
+        "\140\2\35\1\143\1\144\1\uffff\1\145\1\35\2\uffff\2\35\3\uffff\1"+
+        "\151\1\35\1\153\1\uffff\1\154\2\uffff";
     static final String DFA8_eofS =
-        "\153\uffff";
+        "\155\uffff";
     static final String DFA8_minS =
-        "\1\11\13\uffff\2\75\3\uffff\1\52\1\uffff\1\157\1\156\1\162\1\146"+
-        "\1\150\1\154\1\150\1\157\1\141\1\145\12\uffff\1\164\1\144\2\60\1"+
-        "\145\1\165\1\163\1\144\2\151\1\60\1\156\1\154\1\141\2\60\2\uffff"+
-        "\1\156\2\145\1\146\1\154\1\164\1\uffff\1\143\1\163\1\165\1\144\2"+
-        "\uffff\3\60\1\146\1\150\1\165\2\145\1\60\1\145\1\162\1\60\3\uffff"+
-        "\1\60\1\151\1\156\2\60\1\uffff\1\60\1\156\2\uffff\1\154\1\143\3"+
-        "\uffff\1\60\1\145\1\60\1\uffff\1\60\2\uffff";
+        "\1\11\10\uffff\1\75\2\uffff\2\75\3\uffff\1\52\1\uffff\1\157\1\156"+
+        "\1\162\1\146\1\150\1\154\1\150\1\157\1\141\1\145\14\uffff\1\164"+
+        "\1\144\2\60\1\145\1\165\1\163\1\144\2\151\1\60\1\156\1\154\1\141"+
+        "\2\60\2\uffff\1\156\2\145\1\146\1\154\1\164\1\uffff\1\143\1\163"+
+        "\1\165\1\144\2\uffff\3\60\1\146\1\150\1\165\2\145\1\60\1\145\1\162"+
+        "\1\60\3\uffff\1\60\1\151\1\156\2\60\1\uffff\1\60\1\156\2\uffff\1"+
+        "\154\1\143\3\uffff\1\60\1\145\1\60\1\uffff\1\60\2\uffff";
     static final String DFA8_maxS =
-        "\1\172\13\uffff\2\75\3\uffff\1\57\1\uffff\1\157\1\156\1\162\1\146"+
-        "\1\162\1\156\1\162\1\157\1\165\1\145\12\uffff\1\164\1\144\2\172"+
-        "\1\145\1\165\1\163\1\144\2\151\1\172\1\156\1\154\1\164\2\172\2\uffff"+
-        "\1\156\2\145\1\167\1\154\1\164\1\uffff\1\143\1\163\1\165\1\144\2"+
-        "\uffff\3\172\1\146\1\150\1\165\2\145\1\172\1\145\1\162\1\172\3\uffff"+
-        "\1\172\1\151\1\156\2\172\1\uffff\1\172\1\156\2\uffff\1\154\1\143"+
-        "\3\uffff\1\172\1\145\1\172\1\uffff\1\172\2\uffff";
+        "\1\172\10\uffff\1\75\2\uffff\2\75\3\uffff\1\57\1\uffff\1\157\1\156"+
+        "\1\162\1\146\1\162\1\156\1\162\1\157\1\165\1\145\14\uffff\1\164"+
+        "\1\144\2\172\1\145\1\165\1\163\1\144\2\151\1\172\1\156\1\154\1\164"+
+        "\2\172\2\uffff\1\156\2\145\1\167\1\154\1\164\1\uffff\1\143\1\163"+
+        "\1\165\1\144\2\uffff\3\172\1\146\1\150\1\165\2\145\1\172\1\145\1"+
+        "\162\1\172\3\uffff\1\172\1\151\1\156\2\172\1\uffff\1\172\1\156\2"+
+        "\uffff\1\154\1\143\3\uffff\1\172\1\145\1\172\1\uffff\1\172\2\uffff";
     static final String DFA8_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\2\uffff"+
-        "\1\20\1\21\1\22\1\uffff\1\24\12\uffff\1\46\1\47\1\51\1\52\1\15\1"+
-        "\14\1\17\1\16\1\50\1\23\20\uffff\1\27\1\30\6\uffff\1\35\4\uffff"+
-        "\1\25\1\26\14\uffff\1\31\1\44\1\32\5\uffff\1\37\2\uffff\1\42\1\33"+
-        "\2\uffff\1\34\1\43\1\45\3\uffff\1\41\1\uffff\1\40\1\36";
+        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\uffff\1\12\1\13\2\uffff"+
+        "\1\21\1\22\1\23\1\uffff\1\25\12\uffff\1\47\1\50\1\52\1\53\1\14\1"+
+        "\11\1\16\1\15\1\20\1\17\1\51\1\24\20\uffff\1\30\1\31\6\uffff\1\36"+
+        "\4\uffff\1\26\1\27\14\uffff\1\32\1\45\1\33\5\uffff\1\40\2\uffff"+
+        "\1\43\1\34\2\uffff\1\35\1\44\1\46\3\uffff\1\42\1\uffff\1\41\1\37";
     static final String DFA8_specialS =
-        "\153\uffff}>";
+        "\155\uffff}>";
     static final String[] DFA8_transitionS = {
-            "\2\40\2\uffff\1\40\22\uffff\1\40\1\13\1\37\2\uffff\1\22\1\1"+
+            "\2\40\2\uffff\1\40\22\uffff\1\40\1\11\1\37\2\uffff\1\22\1\1"+
             "\1\uffff\1\2\1\3\1\20\1\16\1\4\1\17\1\uffff\1\21\12\36\1\5\1"+
-            "\6\1\14\1\12\1\15\1\11\1\uffff\32\35\1\7\1\uffff\1\10\1\uffff"+
+            "\6\1\14\1\13\1\15\1\12\1\uffff\32\35\1\7\1\uffff\1\10\1\uffff"+
             "\1\35\1\uffff\1\24\2\35\1\32\1\30\1\33\2\35\1\26\4\35\1\23\1"+
             "\25\2\35\1\34\1\35\1\27\2\35\1\31\3\35",
             "",
@@ -1705,99 +1735,101 @@ public class AslLexer extends Lexer {
             "",
             "",
             "",
-            "",
-            "",
-            "",
             "\1\41",
+            "",
+            "",
             "\1\43",
+            "\1\45",
             "",
             "",
             "",
-            "\1\45\4\uffff\1\45",
+            "\1\47\4\uffff\1\47",
             "",
-            "\1\47",
-            "\1\50",
             "\1\51",
             "\1\52",
-            "\1\53\11\uffff\1\54",
-            "\1\55\1\uffff\1\56",
-            "\1\57\11\uffff\1\60",
-            "\1\61",
-            "\1\63\23\uffff\1\62",
-            "\1\64",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\65",
+            "\1\53",
+            "\1\54",
+            "\1\55\11\uffff\1\56",
+            "\1\57\1\uffff\1\60",
+            "\1\61\11\uffff\1\62",
+            "\1\63",
+            "\1\65\23\uffff\1\64",
             "\1\66",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\67",
+            "\1\70",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
-            "\1\71",
-            "\1\72",
             "\1\73",
             "\1\74",
             "\1\75",
             "\1\76",
-            "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
+            "\1\77",
             "\1\100",
-            "\1\101",
-            "\1\103\22\uffff\1\102",
+            "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
+            "\1\102",
+            "\1\103",
+            "\1\105\22\uffff\1\104",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
             "",
             "",
-            "\1\106",
-            "\1\107",
             "\1\110",
-            "\1\113\2\uffff\1\111\15\uffff\1\112",
-            "\1\114",
-            "\1\115",
-            "",
+            "\1\111",
+            "\1\112",
+            "\1\115\2\uffff\1\113\15\uffff\1\114",
             "\1\116",
             "\1\117",
+            "",
             "\1\120",
             "\1\121",
+            "\1\122",
+            "\1\123",
             "",
             "",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
-            "\1\125",
-            "\1\126",
             "\1\127",
             "\1\130",
             "\1\131",
-            "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
+            "\1\132",
             "\1\133",
-            "\1\134",
+            "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
+            "\1\135",
+            "\1\136",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
             "",
             "",
             "",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
-            "\1\137",
-            "\1\140",
+            "\1\141",
+            "\1\142",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
             "",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
-            "\1\144",
-            "",
-            "",
-            "\1\145",
             "\1\146",
             "",
             "",
+            "\1\147",
+            "\1\150",
+            "",
+            "",
             "",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
-            "\1\150",
+            "\1\152",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
             "",
             "\12\35\7\uffff\32\35\4\uffff\1\35\1\uffff\32\35",
@@ -1835,7 +1867,7 @@ public class AslLexer extends Lexer {
             this.transition = DFA8_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | QUESTION | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | ID | INT | COMMENT | STRING | WS );";
+            return "1:1: Tokens : ( T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | FACTORIAL | QUESTION | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | ID | INT | COMMENT | STRING | WS );";
         }
     }
  

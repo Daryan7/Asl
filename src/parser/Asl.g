@@ -141,9 +141,9 @@ num_expr:   term ( (PLUS^ | MINUS^) term)*
 term    :   factor ( (MUL^ | DIV^ | MOD^) factor)*
         ;
 
-factor  :   (NOT^ | PLUS^ | MINUS^)? atom
+factor  :   (NOT^ | PLUS^ | MINUS^)? factorial
         ;
-
+factorial:  atom FACTORIAL^*;
 // Atom of the expressions (variables, integer and boolean literals).
 // An atom can also be a function call or another expression
 // in parenthesis
@@ -157,6 +157,7 @@ atom    :   var
 
 // A function call has a lits of arguments in parenthesis (possibly empty)
 funcall :   ID '(' expr_list? ')'('['expr']')? -> ^(FUNCALL ID ^(ARGLIST expr_list?) expr?)
+        |   SUMFUNC^'('! expr_list? ')'!
         ;
 
 // A list of expressions separated by commas
@@ -168,6 +169,8 @@ var : ID
     ;
 
 // Basic tokens
+SUMFUNC: 'sum'
+FACTORIAL : '!';
 QUESTION : '?';
 EQUAL	: '=' ;
 NOT_EQUAL: 	'!=' ;

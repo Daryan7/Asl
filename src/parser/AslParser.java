@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g 2017-03-10 12:31:00
+// $ANTLR 3.4 C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g 2017-03-10 16:44:24
 
 package parser;
 import interp.AslTree;
@@ -41,11 +41,10 @@ import org.antlr.runtime.tree.*;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class AslParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "ARGLIST", "ASSIGN", "BOOLEAN", "COMMENT", "DIV", "DO", "ELSE", "ENDFUNC", "ENDIF", "ENDWHILE", "EQUAL", "ESC_SEQ", "FALSE", "FUNC", "FUNCALL", "FUNCVEC", "GE", "GT", "ID", "IF", "INT", "LE", "LIST_FUNCTIONS", "LIST_INSTR", "LT", "MINUS", "MOD", "MUL", "NOT", "NOT_EQUAL", "OR", "PARAMS", "PLUS", "PREF", "PVALUE", "QUESTION", "READ", "RETURN", "STRING", "TERNARY", "THEN", "TRUE", "VECTOR", "WHILE", "WRITE", "WS", "'&'", "'('", "')'", "','", "':'", "';'", "'['", "']'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "ARGLIST", "ASSIGN", "BOOLEAN", "COMMENT", "DIV", "DO", "ELSE", "ENDFUNC", "ENDIF", "ENDWHILE", "EQUAL", "ESC_SEQ", "FACTORIAL", "FALSE", "FUNC", "FUNCALL", "FUNCVEC", "GE", "GT", "ID", "IF", "INT", "LE", "LIST_FUNCTIONS", "LIST_INSTR", "LT", "MINUS", "MOD", "MUL", "NOT", "NOT_EQUAL", "OR", "PARAMS", "PLUS", "PREF", "PVALUE", "QUESTION", "READ", "RETURN", "STRING", "TERNARY", "THEN", "TRUE", "VECTOR", "WHILE", "WRITE", "WS", "'&'", "'('", "')'", "','", "':'", "';'", "'['", "']'"
     };
 
     public static final int EOF=-1;
-    public static final int T__51=51;
     public static final int T__52=52;
     public static final int T__53=53;
     public static final int T__54=54;
@@ -53,6 +52,7 @@ public class AslParser extends Parser {
     public static final int T__56=56;
     public static final int T__57=57;
     public static final int T__58=58;
+    public static final int T__59=59;
     public static final int AND=4;
     public static final int ARGLIST=5;
     public static final int ASSIGN=6;
@@ -66,40 +66,41 @@ public class AslParser extends Parser {
     public static final int ENDWHILE=14;
     public static final int EQUAL=15;
     public static final int ESC_SEQ=16;
-    public static final int FALSE=17;
-    public static final int FUNC=18;
-    public static final int FUNCALL=19;
-    public static final int FUNCVEC=20;
-    public static final int GE=21;
-    public static final int GT=22;
-    public static final int ID=23;
-    public static final int IF=24;
-    public static final int INT=25;
-    public static final int LE=26;
-    public static final int LIST_FUNCTIONS=27;
-    public static final int LIST_INSTR=28;
-    public static final int LT=29;
-    public static final int MINUS=30;
-    public static final int MOD=31;
-    public static final int MUL=32;
-    public static final int NOT=33;
-    public static final int NOT_EQUAL=34;
-    public static final int OR=35;
-    public static final int PARAMS=36;
-    public static final int PLUS=37;
-    public static final int PREF=38;
-    public static final int PVALUE=39;
-    public static final int QUESTION=40;
-    public static final int READ=41;
-    public static final int RETURN=42;
-    public static final int STRING=43;
-    public static final int TERNARY=44;
-    public static final int THEN=45;
-    public static final int TRUE=46;
-    public static final int VECTOR=47;
-    public static final int WHILE=48;
-    public static final int WRITE=49;
-    public static final int WS=50;
+    public static final int FACTORIAL=17;
+    public static final int FALSE=18;
+    public static final int FUNC=19;
+    public static final int FUNCALL=20;
+    public static final int FUNCVEC=21;
+    public static final int GE=22;
+    public static final int GT=23;
+    public static final int ID=24;
+    public static final int IF=25;
+    public static final int INT=26;
+    public static final int LE=27;
+    public static final int LIST_FUNCTIONS=28;
+    public static final int LIST_INSTR=29;
+    public static final int LT=30;
+    public static final int MINUS=31;
+    public static final int MOD=32;
+    public static final int MUL=33;
+    public static final int NOT=34;
+    public static final int NOT_EQUAL=35;
+    public static final int OR=36;
+    public static final int PARAMS=37;
+    public static final int PLUS=38;
+    public static final int PREF=39;
+    public static final int PVALUE=40;
+    public static final int QUESTION=41;
+    public static final int READ=42;
+    public static final int RETURN=43;
+    public static final int STRING=44;
+    public static final int TERNARY=45;
+    public static final int THEN=46;
+    public static final int TRUE=47;
+    public static final int VECTOR=48;
+    public static final int WHILE=49;
+    public static final int WRITE=50;
+    public static final int WS=51;
 
     // delegates
     public Parser[] getDelegates() {
@@ -365,22 +366,22 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree char_literal8_tree=null;
         AslTree char_literal10_tree=null;
-        RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
         RewriteRuleTokenStream stream_53=new RewriteRuleTokenStream(adaptor,"token 53");
+        RewriteRuleTokenStream stream_54=new RewriteRuleTokenStream(adaptor,"token 54");
         RewriteRuleSubtreeStream stream_paramlist=new RewriteRuleSubtreeStream(adaptor,"rule paramlist");
         try {
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:71:8: ( '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) )
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:71:10: '(' ( paramlist )? ')'
             {
-            char_literal8=(Token)match(input,52,FOLLOW_52_in_params254);  
-            stream_52.add(char_literal8);
+            char_literal8=(Token)match(input,53,FOLLOW_53_in_params254);  
+            stream_53.add(char_literal8);
 
 
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:71:14: ( paramlist )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
-            if ( (LA2_0==ID||LA2_0==51) ) {
+            if ( (LA2_0==ID||LA2_0==52) ) {
                 alt2=1;
             }
             switch (alt2) {
@@ -400,8 +401,8 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            char_literal10=(Token)match(input,53,FOLLOW_53_in_params259);  
-            stream_53.add(char_literal10);
+            char_literal10=(Token)match(input,54,FOLLOW_54_in_params259);  
+            stream_54.add(char_literal10);
 
 
             // AST REWRITE
@@ -506,7 +507,7 @@ public TreeAdaptor getTreeAdaptor() {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==54) ) {
+                if ( (LA3_0==55) ) {
                     alt3=1;
                 }
 
@@ -515,7 +516,7 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:75:19: ',' ! param
             	    {
-            	    char_literal12=(Token)match(input,54,FOLLOW_54_in_paramlist288); 
+            	    char_literal12=(Token)match(input,55,FOLLOW_55_in_paramlist288); 
 
             	    pushFollow(FOLLOW_param_in_paramlist291);
             	    param13=param();
@@ -578,14 +579,14 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree id_tree=null;
         AslTree char_literal14_tree=null;
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
-        RewriteRuleTokenStream stream_51=new RewriteRuleTokenStream(adaptor,"token 51");
+        RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
 
         try {
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:80:9: ( '&' id= ID -> ^( PREF[$id, $id.text] ) |id= ID -> ^( PVALUE[$id, $id.text] ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==51) ) {
+            if ( (LA4_0==52) ) {
                 alt4=1;
             }
             else if ( (LA4_0==ID) ) {
@@ -602,8 +603,8 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:80:13: '&' id= ID
                     {
-                    char_literal14=(Token)match(input,51,FOLLOW_51_in_param316);  
-                    stream_51.add(char_literal14);
+                    char_literal14=(Token)match(input,52,FOLLOW_52_in_param316);  
+                    stream_52.add(char_literal14);
 
 
                     id=(Token)match(input,ID,FOLLOW_ID_in_param320);  
@@ -723,7 +724,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         AslTree char_literal16_tree=null;
-        RewriteRuleTokenStream stream_56=new RewriteRuleTokenStream(adaptor,"token 56");
+        RewriteRuleTokenStream stream_57=new RewriteRuleTokenStream(adaptor,"token 57");
         RewriteRuleSubtreeStream stream_instruction=new RewriteRuleSubtreeStream(adaptor,"rule instruction");
         try {
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:86:9: ( instruction ( ';' instruction )* -> ^( LIST_INSTR ( instruction )+ ) )
@@ -742,7 +743,7 @@ public TreeAdaptor getTreeAdaptor() {
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( (LA5_0==56) ) {
+                if ( (LA5_0==57) ) {
                     alt5=1;
                 }
 
@@ -751,8 +752,8 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:86:25: ';' instruction
             	    {
-            	    char_literal16=(Token)match(input,56,FOLLOW_56_in_block_instructions380);  
-            	    stream_56.add(char_literal16);
+            	    char_literal16=(Token)match(input,57,FOLLOW_57_in_block_instructions380);  
+            	    stream_57.add(char_literal16);
 
 
             	    pushFollow(FOLLOW_instruction_in_block_instructions382);
@@ -871,10 +872,10 @@ public TreeAdaptor getTreeAdaptor() {
                 {
                 int LA6_1 = input.LA(2);
 
-                if ( (LA6_1==EQUAL||LA6_1==57) ) {
+                if ( (LA6_1==EQUAL||LA6_1==58) ) {
                     alt6=1;
                 }
-                else if ( (LA6_1==52) ) {
+                else if ( (LA6_1==53) ) {
                     alt6=4;
                 }
                 else {
@@ -915,7 +916,7 @@ public TreeAdaptor getTreeAdaptor() {
             case ENDFUNC:
             case ENDIF:
             case ENDWHILE:
-            case 56:
+            case 57:
                 {
                 alt6=8;
                 }
@@ -1404,7 +1405,7 @@ public TreeAdaptor getTreeAdaptor() {
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==FALSE||LA8_0==ID||LA8_0==INT||LA8_0==MINUS||LA8_0==NOT||LA8_0==PLUS||LA8_0==STRING||LA8_0==TRUE||LA8_0==52) ) {
+            if ( (LA8_0==FALSE||LA8_0==ID||LA8_0==INT||LA8_0==MINUS||LA8_0==NOT||LA8_0==PLUS||LA8_0==STRING||LA8_0==TRUE||LA8_0==53) ) {
                 alt8=1;
             }
             switch (alt8) {
@@ -1646,7 +1647,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                     adaptor.addChild(root_0, expr47.getTree());
 
-                    char_literal48=(Token)match(input,55,FOLLOW_55_in_expr802); 
+                    char_literal48=(Token)match(input,56,FOLLOW_56_in_expr802); 
 
                     pushFollow(FOLLOW_expr_in_expr805);
                     expr49=expr();
@@ -2406,7 +2407,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "factor"
-    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:144:1: factor : ( NOT ^| PLUS ^| MINUS ^)? atom ;
+    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:144:1: factor : ( NOT ^| PLUS ^| MINUS ^)? factorial ;
     public final AslParser.factor_return factor() throws RecognitionException {
         AslParser.factor_return retval = new AslParser.factor_return();
         retval.start = input.LT(1);
@@ -2417,7 +2418,7 @@ public TreeAdaptor getTreeAdaptor() {
         Token NOT73=null;
         Token PLUS74=null;
         Token MINUS75=null;
-        AslParser.atom_return atom76 =null;
+        AslParser.factorial_return factorial76 =null;
 
 
         AslTree NOT73_tree=null;
@@ -2425,8 +2426,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree MINUS75_tree=null;
 
         try {
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:144:9: ( ( NOT ^| PLUS ^| MINUS ^)? atom )
-            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:144:13: ( NOT ^| PLUS ^| MINUS ^)? atom
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:144:9: ( ( NOT ^| PLUS ^| MINUS ^)? factorial )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:144:13: ( NOT ^| PLUS ^| MINUS ^)? factorial
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2492,12 +2493,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            pushFollow(FOLLOW_atom_in_factor1018);
-            atom76=atom();
+            pushFollow(FOLLOW_factorial_in_factor1018);
+            factorial76=factorial();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, atom76.getTree());
+            adaptor.addChild(root_0, factorial76.getTree());
 
             }
 
@@ -2523,6 +2524,96 @@ public TreeAdaptor getTreeAdaptor() {
     // $ANTLR end "factor"
 
 
+    public static class factorial_return extends ParserRuleReturnScope {
+        AslTree tree;
+        public Object getTree() { return tree; }
+    };
+
+
+    // $ANTLR start "factorial"
+    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:146:1: factorial : atom ( FACTORIAL ^)* ;
+    public final AslParser.factorial_return factorial() throws RecognitionException {
+        AslParser.factorial_return retval = new AslParser.factorial_return();
+        retval.start = input.LT(1);
+
+
+        AslTree root_0 = null;
+
+        Token FACTORIAL78=null;
+        AslParser.atom_return atom77 =null;
+
+
+        AslTree FACTORIAL78_tree=null;
+
+        try {
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:146:10: ( atom ( FACTORIAL ^)* )
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:146:13: atom ( FACTORIAL ^)*
+            {
+            root_0 = (AslTree)adaptor.nil();
+
+
+            pushFollow(FOLLOW_atom_in_factorial1034);
+            atom77=atom();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, atom77.getTree());
+
+            // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:146:27: ( FACTORIAL ^)*
+            loop19:
+            do {
+                int alt19=2;
+                int LA19_0 = input.LA(1);
+
+                if ( (LA19_0==FACTORIAL) ) {
+                    alt19=1;
+                }
+
+
+                switch (alt19) {
+            	case 1 :
+            	    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:146:27: FACTORIAL ^
+            	    {
+            	    FACTORIAL78=(Token)match(input,FACTORIAL,FOLLOW_FACTORIAL_in_factorial1036); 
+            	    FACTORIAL78_tree = 
+            	    (AslTree)adaptor.create(FACTORIAL78)
+            	    ;
+            	    root_0 = (AslTree)adaptor.becomeRoot(FACTORIAL78_tree, root_0);
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop19;
+                }
+            } while (true);
+
+
+            }
+
+            retval.stop = input.LT(-1);
+
+
+            retval.tree = (AslTree)adaptor.rulePostProcessing(root_0);
+            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+    	retval.tree = (AslTree)adaptor.errorNode(input, retval.start, input.LT(-1), re);
+
+        }
+
+        finally {
+        	// do for sure before leaving
+        }
+        return retval;
+    }
+    // $ANTLR end "factorial"
+
+
     public static class atom_return extends ParserRuleReturnScope {
         AslTree tree;
         public Object getTree() { return tree; }
@@ -2539,42 +2630,42 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree root_0 = null;
 
         Token b=null;
-        Token STRING78=null;
-        Token INT79=null;
-        Token char_literal81=null;
+        Token STRING80=null;
+        Token INT81=null;
         Token char_literal83=null;
-        AslParser.var_return var77 =null;
+        Token char_literal85=null;
+        AslParser.var_return var79 =null;
 
-        AslParser.funcall_return funcall80 =null;
+        AslParser.funcall_return funcall82 =null;
 
-        AslParser.expr_return expr82 =null;
+        AslParser.expr_return expr84 =null;
 
 
         AslTree b_tree=null;
-        AslTree STRING78_tree=null;
-        AslTree INT79_tree=null;
-        AslTree char_literal81_tree=null;
+        AslTree STRING80_tree=null;
+        AslTree INT81_tree=null;
         AslTree char_literal83_tree=null;
+        AslTree char_literal85_tree=null;
         RewriteRuleTokenStream stream_TRUE=new RewriteRuleTokenStream(adaptor,"token TRUE");
         RewriteRuleTokenStream stream_FALSE=new RewriteRuleTokenStream(adaptor,"token FALSE");
 
         try {
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:150:9: ( var | STRING | INT | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !)
-            int alt20=6;
+            int alt21=6;
             switch ( input.LA(1) ) {
             case ID:
                 {
-                int LA20_1 = input.LA(2);
+                int LA21_1 = input.LA(2);
 
-                if ( (LA20_1==AND||(LA20_1 >= DIV && LA20_1 <= EQUAL)||(LA20_1 >= GE && LA20_1 <= GT)||LA20_1==LE||(LA20_1 >= LT && LA20_1 <= MUL)||(LA20_1 >= NOT_EQUAL && LA20_1 <= OR)||LA20_1==PLUS||LA20_1==QUESTION||LA20_1==THEN||(LA20_1 >= 53 && LA20_1 <= 58)) ) {
-                    alt20=1;
+                if ( (LA21_1==AND||(LA21_1 >= DIV && LA21_1 <= EQUAL)||LA21_1==FACTORIAL||(LA21_1 >= GE && LA21_1 <= GT)||LA21_1==LE||(LA21_1 >= LT && LA21_1 <= MUL)||(LA21_1 >= NOT_EQUAL && LA21_1 <= OR)||LA21_1==PLUS||LA21_1==QUESTION||LA21_1==THEN||(LA21_1 >= 54 && LA21_1 <= 59)) ) {
+                    alt21=1;
                 }
-                else if ( (LA20_1==52) ) {
-                    alt20=5;
+                else if ( (LA21_1==53) ) {
+                    alt21=5;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 20, 1, input);
+                        new NoViableAltException("", 21, 1, input);
 
                     throw nvae;
 
@@ -2583,46 +2674,46 @@ public TreeAdaptor getTreeAdaptor() {
                 break;
             case STRING:
                 {
-                alt20=2;
+                alt21=2;
                 }
                 break;
             case INT:
                 {
-                alt20=3;
+                alt21=3;
                 }
                 break;
             case FALSE:
             case TRUE:
                 {
-                alt20=4;
+                alt21=4;
                 }
                 break;
-            case 52:
+            case 53:
                 {
-                alt20=6;
+                alt21=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 21, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt20) {
+            switch (alt21) {
                 case 1 :
                     // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:150:13: var
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_var_in_atom1043);
-                    var77=var();
+                    pushFollow(FOLLOW_var_in_atom1053);
+                    var79=var();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, var77.getTree());
+                    adaptor.addChild(root_0, var79.getTree());
 
                     }
                     break;
@@ -2632,11 +2723,11 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    STRING78=(Token)match(input,STRING,FOLLOW_STRING_in_atom1057); 
-                    STRING78_tree = 
-                    (AslTree)adaptor.create(STRING78)
+                    STRING80=(Token)match(input,STRING,FOLLOW_STRING_in_atom1067); 
+                    STRING80_tree = 
+                    (AslTree)adaptor.create(STRING80)
                     ;
-                    adaptor.addChild(root_0, STRING78_tree);
+                    adaptor.addChild(root_0, STRING80_tree);
 
 
                     }
@@ -2647,11 +2738,11 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    INT79=(Token)match(input,INT,FOLLOW_INT_in_atom1071); 
-                    INT79_tree = 
-                    (AslTree)adaptor.create(INT79)
+                    INT81=(Token)match(input,INT,FOLLOW_INT_in_atom1081); 
+                    INT81_tree = 
+                    (AslTree)adaptor.create(INT81)
                     ;
-                    adaptor.addChild(root_0, INT79_tree);
+                    adaptor.addChild(root_0, INT81_tree);
 
 
                     }
@@ -2660,27 +2751,27 @@ public TreeAdaptor getTreeAdaptor() {
                     // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:153:13: (b= TRUE |b= FALSE )
                     {
                     // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:153:13: (b= TRUE |b= FALSE )
-                    int alt19=2;
-                    int LA19_0 = input.LA(1);
+                    int alt20=2;
+                    int LA20_0 = input.LA(1);
 
-                    if ( (LA19_0==TRUE) ) {
-                        alt19=1;
+                    if ( (LA20_0==TRUE) ) {
+                        alt20=1;
                     }
-                    else if ( (LA19_0==FALSE) ) {
-                        alt19=2;
+                    else if ( (LA20_0==FALSE) ) {
+                        alt20=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 19, 0, input);
+                            new NoViableAltException("", 20, 0, input);
 
                         throw nvae;
 
                     }
-                    switch (alt19) {
+                    switch (alt20) {
                         case 1 :
                             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:153:14: b= TRUE
                             {
-                            b=(Token)match(input,TRUE,FOLLOW_TRUE_in_atom1088);  
+                            b=(Token)match(input,TRUE,FOLLOW_TRUE_in_atom1098);  
                             stream_TRUE.add(b);
 
 
@@ -2689,7 +2780,7 @@ public TreeAdaptor getTreeAdaptor() {
                         case 2 :
                             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:153:23: b= FALSE
                             {
-                            b=(Token)match(input,FALSE,FOLLOW_FALSE_in_atom1094);  
+                            b=(Token)match(input,FALSE,FOLLOW_FALSE_in_atom1104);  
                             stream_FALSE.add(b);
 
 
@@ -2735,12 +2826,12 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_funcall_in_atom1117);
-                    funcall80=funcall();
+                    pushFollow(FOLLOW_funcall_in_atom1127);
+                    funcall82=funcall();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, funcall80.getTree());
+                    adaptor.addChild(root_0, funcall82.getTree());
 
                     }
                     break;
@@ -2750,16 +2841,16 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    char_literal81=(Token)match(input,52,FOLLOW_52_in_atom1131); 
+                    char_literal83=(Token)match(input,53,FOLLOW_53_in_atom1141); 
 
-                    pushFollow(FOLLOW_expr_in_atom1134);
-                    expr82=expr();
+                    pushFollow(FOLLOW_expr_in_atom1144);
+                    expr84=expr();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, expr82.getTree());
+                    adaptor.addChild(root_0, expr84.getTree());
 
-                    char_literal83=(Token)match(input,53,FOLLOW_53_in_atom1136); 
+                    char_literal85=(Token)match(input,54,FOLLOW_54_in_atom1146); 
 
                     }
                     break;
@@ -2802,57 +2893,57 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token ID84=null;
-        Token char_literal85=null;
+        Token ID86=null;
         Token char_literal87=null;
-        Token char_literal88=null;
+        Token char_literal89=null;
         Token char_literal90=null;
-        AslParser.expr_list_return expr_list86 =null;
+        Token char_literal92=null;
+        AslParser.expr_list_return expr_list88 =null;
 
-        AslParser.expr_return expr89 =null;
+        AslParser.expr_return expr91 =null;
 
 
-        AslTree ID84_tree=null;
-        AslTree char_literal85_tree=null;
+        AslTree ID86_tree=null;
         AslTree char_literal87_tree=null;
-        AslTree char_literal88_tree=null;
+        AslTree char_literal89_tree=null;
         AslTree char_literal90_tree=null;
-        RewriteRuleTokenStream stream_57=new RewriteRuleTokenStream(adaptor,"token 57");
+        AslTree char_literal92_tree=null;
         RewriteRuleTokenStream stream_58=new RewriteRuleTokenStream(adaptor,"token 58");
+        RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
-        RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
         RewriteRuleTokenStream stream_53=new RewriteRuleTokenStream(adaptor,"token 53");
+        RewriteRuleTokenStream stream_54=new RewriteRuleTokenStream(adaptor,"token 54");
         RewriteRuleSubtreeStream stream_expr_list=new RewriteRuleSubtreeStream(adaptor,"rule expr_list");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:159:9: ( ID '(' ( expr_list )? ')' ( '[' expr ']' )? -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ( expr )? ) )
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:159:13: ID '(' ( expr_list )? ')' ( '[' expr ']' )?
             {
-            ID84=(Token)match(input,ID,FOLLOW_ID_in_funcall1157);  
-            stream_ID.add(ID84);
+            ID86=(Token)match(input,ID,FOLLOW_ID_in_funcall1167);  
+            stream_ID.add(ID86);
 
 
-            char_literal85=(Token)match(input,52,FOLLOW_52_in_funcall1159);  
-            stream_52.add(char_literal85);
+            char_literal87=(Token)match(input,53,FOLLOW_53_in_funcall1169);  
+            stream_53.add(char_literal87);
 
 
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:159:20: ( expr_list )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA21_0==FALSE||LA21_0==ID||LA21_0==INT||LA21_0==MINUS||LA21_0==NOT||LA21_0==PLUS||LA21_0==STRING||LA21_0==TRUE||LA21_0==52) ) {
-                alt21=1;
+            if ( (LA22_0==FALSE||LA22_0==ID||LA22_0==INT||LA22_0==MINUS||LA22_0==NOT||LA22_0==PLUS||LA22_0==STRING||LA22_0==TRUE||LA22_0==53) ) {
+                alt22=1;
             }
-            switch (alt21) {
+            switch (alt22) {
                 case 1 :
                     // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:159:20: expr_list
                     {
-                    pushFollow(FOLLOW_expr_list_in_funcall1161);
-                    expr_list86=expr_list();
+                    pushFollow(FOLLOW_expr_list_in_funcall1171);
+                    expr_list88=expr_list();
 
                     state._fsp--;
 
-                    stream_expr_list.add(expr_list86.getTree());
+                    stream_expr_list.add(expr_list88.getTree());
 
                     }
                     break;
@@ -2860,34 +2951,34 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            char_literal87=(Token)match(input,53,FOLLOW_53_in_funcall1164);  
-            stream_53.add(char_literal87);
+            char_literal89=(Token)match(input,54,FOLLOW_54_in_funcall1174);  
+            stream_54.add(char_literal89);
 
 
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:159:34: ( '[' expr ']' )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA22_0==57) ) {
-                alt22=1;
+            if ( (LA23_0==58) ) {
+                alt23=1;
             }
-            switch (alt22) {
+            switch (alt23) {
                 case 1 :
                     // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:159:35: '[' expr ']'
                     {
-                    char_literal88=(Token)match(input,57,FOLLOW_57_in_funcall1166);  
-                    stream_57.add(char_literal88);
+                    char_literal90=(Token)match(input,58,FOLLOW_58_in_funcall1176);  
+                    stream_58.add(char_literal90);
 
 
-                    pushFollow(FOLLOW_expr_in_funcall1167);
-                    expr89=expr();
+                    pushFollow(FOLLOW_expr_in_funcall1177);
+                    expr91=expr();
 
                     state._fsp--;
 
-                    stream_expr.add(expr89.getTree());
+                    stream_expr.add(expr91.getTree());
 
-                    char_literal90=(Token)match(input,58,FOLLOW_58_in_funcall1168);  
-                    stream_58.add(char_literal90);
+                    char_literal92=(Token)match(input,59,FOLLOW_59_in_funcall1178);  
+                    stream_59.add(char_literal92);
 
 
                     }
@@ -2897,7 +2988,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
             // AST REWRITE
-            // elements: expr_list, ID, expr
+            // elements: expr, expr_list, ID
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2991,13 +3082,13 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token char_literal92=null;
-        AslParser.expr_return expr91 =null;
-
+        Token char_literal94=null;
         AslParser.expr_return expr93 =null;
 
+        AslParser.expr_return expr95 =null;
 
-        AslTree char_literal92_tree=null;
+
+        AslTree char_literal94_tree=null;
 
         try {
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:163:10: ( expr ( ',' ! expr )* )
@@ -3006,42 +3097,42 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_expr_in_expr_list1206);
-            expr91=expr();
+            pushFollow(FOLLOW_expr_in_expr_list1216);
+            expr93=expr();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, expr91.getTree());
+            adaptor.addChild(root_0, expr93.getTree());
 
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:163:18: ( ',' ! expr )*
-            loop23:
+            loop24:
             do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+                int alt24=2;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA23_0==54) ) {
-                    alt23=1;
+                if ( (LA24_0==55) ) {
+                    alt24=1;
                 }
 
 
-                switch (alt23) {
+                switch (alt24) {
             	case 1 :
             	    // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:163:19: ',' ! expr
             	    {
-            	    char_literal92=(Token)match(input,54,FOLLOW_54_in_expr_list1209); 
+            	    char_literal94=(Token)match(input,55,FOLLOW_55_in_expr_list1219); 
 
-            	    pushFollow(FOLLOW_expr_in_expr_list1212);
-            	    expr93=expr();
+            	    pushFollow(FOLLOW_expr_in_expr_list1222);
+            	    expr95=expr();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, expr93.getTree());
+            	    adaptor.addChild(root_0, expr95.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop23;
+            	    break loop24;
                 }
             } while (true);
 
@@ -3086,37 +3177,37 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree root_0 = null;
 
         Token id=null;
-        Token ID94=null;
-        Token char_literal95=null;
+        Token ID96=null;
         Token char_literal97=null;
-        AslParser.expr_return expr96 =null;
+        Token char_literal99=null;
+        AslParser.expr_return expr98 =null;
 
 
         AslTree id_tree=null;
-        AslTree ID94_tree=null;
-        AslTree char_literal95_tree=null;
+        AslTree ID96_tree=null;
         AslTree char_literal97_tree=null;
-        RewriteRuleTokenStream stream_57=new RewriteRuleTokenStream(adaptor,"token 57");
+        AslTree char_literal99_tree=null;
         RewriteRuleTokenStream stream_58=new RewriteRuleTokenStream(adaptor,"token 58");
+        RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
             // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:166:5: ( ID |id= ID '[' expr ']' -> ^( VECTOR[$id.text] expr ) )
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA24_0==ID) ) {
-                int LA24_1 = input.LA(2);
+            if ( (LA25_0==ID) ) {
+                int LA25_1 = input.LA(2);
 
-                if ( (LA24_1==57) ) {
-                    alt24=2;
+                if ( (LA25_1==58) ) {
+                    alt25=2;
                 }
-                else if ( (LA24_1==AND||(LA24_1 >= DIV && LA24_1 <= EQUAL)||(LA24_1 >= GE && LA24_1 <= GT)||LA24_1==LE||(LA24_1 >= LT && LA24_1 <= MUL)||(LA24_1 >= NOT_EQUAL && LA24_1 <= OR)||LA24_1==PLUS||LA24_1==QUESTION||LA24_1==THEN||(LA24_1 >= 53 && LA24_1 <= 56)||LA24_1==58) ) {
-                    alt24=1;
+                else if ( (LA25_1==AND||(LA25_1 >= DIV && LA25_1 <= EQUAL)||LA25_1==FACTORIAL||(LA25_1 >= GE && LA25_1 <= GT)||LA25_1==LE||(LA25_1 >= LT && LA25_1 <= MUL)||(LA25_1 >= NOT_EQUAL && LA25_1 <= OR)||LA25_1==PLUS||LA25_1==QUESTION||LA25_1==THEN||(LA25_1 >= 54 && LA25_1 <= 57)||LA25_1==59) ) {
+                    alt25=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 24, 1, input);
+                        new NoViableAltException("", 25, 1, input);
 
                     throw nvae;
 
@@ -3124,23 +3215,23 @@ public TreeAdaptor getTreeAdaptor() {
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 24, 0, input);
+                    new NoViableAltException("", 25, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt24) {
+            switch (alt25) {
                 case 1 :
                     // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:166:7: ID
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    ID94=(Token)match(input,ID,FOLLOW_ID_in_var1231); 
-                    ID94_tree = 
-                    (AslTree)adaptor.create(ID94)
+                    ID96=(Token)match(input,ID,FOLLOW_ID_in_var1241); 
+                    ID96_tree = 
+                    (AslTree)adaptor.create(ID96)
                     ;
-                    adaptor.addChild(root_0, ID94_tree);
+                    adaptor.addChild(root_0, ID96_tree);
 
 
                     }
@@ -3148,23 +3239,23 @@ public TreeAdaptor getTreeAdaptor() {
                 case 2 :
                     // C:\\Users\\juanm\\IdeaProjects\\Asl\\src\\parser\\Asl.g:167:7: id= ID '[' expr ']'
                     {
-                    id=(Token)match(input,ID,FOLLOW_ID_in_var1241);  
+                    id=(Token)match(input,ID,FOLLOW_ID_in_var1251);  
                     stream_ID.add(id);
 
 
-                    char_literal95=(Token)match(input,57,FOLLOW_57_in_var1242);  
-                    stream_57.add(char_literal95);
+                    char_literal97=(Token)match(input,58,FOLLOW_58_in_var1252);  
+                    stream_58.add(char_literal97);
 
 
-                    pushFollow(FOLLOW_expr_in_var1243);
-                    expr96=expr();
+                    pushFollow(FOLLOW_expr_in_var1253);
+                    expr98=expr();
 
                     state._fsp--;
 
-                    stream_expr.add(expr96.getTree());
+                    stream_expr.add(expr98.getTree());
 
-                    char_literal97=(Token)match(input,58,FOLLOW_58_in_var1244);  
-                    stream_58.add(char_literal97);
+                    char_literal99=(Token)match(input,59,FOLLOW_59_in_var1254);  
+                    stream_59.add(char_literal99);
 
 
                     // AST REWRITE
@@ -3227,25 +3318,25 @@ public TreeAdaptor getTreeAdaptor() {
 
  
 
-    public static final BitSet FOLLOW_func_in_prog184 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_func_in_prog184 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_EOF_in_prog187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FUNC_in_func226 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_ID_in_func229 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_params_in_func231 = new BitSet(new long[]{0x0103060001800000L});
+    public static final BitSet FOLLOW_FUNC_in_func226 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_ID_in_func229 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_params_in_func231 = new BitSet(new long[]{0x02060C0003000000L});
     public static final BitSet FOLLOW_block_instructions_in_func233 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_ENDFUNC_in_func235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_params254 = new BitSet(new long[]{0x0028000000800000L});
-    public static final BitSet FOLLOW_paramlist_in_params256 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_53_in_params259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_param_in_paramlist285 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_54_in_paramlist288 = new BitSet(new long[]{0x0008000000800000L});
-    public static final BitSet FOLLOW_param_in_paramlist291 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_51_in_param316 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_53_in_params254 = new BitSet(new long[]{0x0050000001000000L});
+    public static final BitSet FOLLOW_paramlist_in_params256 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_54_in_params259 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_param_in_paramlist285 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_55_in_paramlist288 = new BitSet(new long[]{0x0010000001000000L});
+    public static final BitSet FOLLOW_param_in_paramlist291 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_52_in_param316 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_ID_in_param320 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ID_in_param343 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_instruction_in_block_instructions377 = new BitSet(new long[]{0x0100000000000002L});
-    public static final BitSet FOLLOW_56_in_block_instructions380 = new BitSet(new long[]{0x0103060001800000L});
-    public static final BitSet FOLLOW_instruction_in_block_instructions382 = new BitSet(new long[]{0x0100000000000002L});
+    public static final BitSet FOLLOW_instruction_in_block_instructions377 = new BitSet(new long[]{0x0200000000000002L});
+    public static final BitSet FOLLOW_57_in_block_instructions380 = new BitSet(new long[]{0x02060C0003000000L});
+    public static final BitSet FOLLOW_instruction_in_block_instructions382 = new BitSet(new long[]{0x0200000000000002L});
     public static final BitSet FOLLOW_assign_in_instruction431 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ite_stmt_in_instruction453 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_while_stmt_in_instruction473 = new BitSet(new long[]{0x0000000000000002L});
@@ -3254,81 +3345,83 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_read_in_instruction531 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_write_in_instruction556 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_var_in_assign614 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_EQUAL_in_assign618 = new BitSet(new long[]{0x0010482242820000L});
+    public static final BitSet FOLLOW_EQUAL_in_assign618 = new BitSet(new long[]{0x0020904485040000L});
     public static final BitSet FOLLOW_expr_in_assign620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IF_in_ite_stmt649 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_expr_in_ite_stmt652 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_THEN_in_ite_stmt654 = new BitSet(new long[]{0x0103060001800000L});
+    public static final BitSet FOLLOW_IF_in_ite_stmt649 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_expr_in_ite_stmt652 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_THEN_in_ite_stmt654 = new BitSet(new long[]{0x02060C0003000000L});
     public static final BitSet FOLLOW_block_instructions_in_ite_stmt657 = new BitSet(new long[]{0x0000000000002800L});
-    public static final BitSet FOLLOW_ELSE_in_ite_stmt660 = new BitSet(new long[]{0x0103060001800000L});
+    public static final BitSet FOLLOW_ELSE_in_ite_stmt660 = new BitSet(new long[]{0x02060C0003000000L});
     public static final BitSet FOLLOW_block_instructions_in_ite_stmt663 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_ENDIF_in_ite_stmt667 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WHILE_in_while_stmt690 = new BitSet(new long[]{0x0010482242820000L});
+    public static final BitSet FOLLOW_WHILE_in_while_stmt690 = new BitSet(new long[]{0x0020904485040000L});
     public static final BitSet FOLLOW_expr_in_while_stmt693 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_DO_in_while_stmt695 = new BitSet(new long[]{0x0103060001800000L});
+    public static final BitSet FOLLOW_DO_in_while_stmt695 = new BitSet(new long[]{0x02060C0003000000L});
     public static final BitSet FOLLOW_block_instructions_in_while_stmt698 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_ENDWHILE_in_while_stmt700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RETURN_in_return_stmt723 = new BitSet(new long[]{0x0010482242820002L});
+    public static final BitSet FOLLOW_RETURN_in_return_stmt723 = new BitSet(new long[]{0x0020904485040002L});
     public static final BitSet FOLLOW_expr_in_return_stmt726 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_READ_in_read745 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_READ_in_read745 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_var_in_read748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WRITE_in_write768 = new BitSet(new long[]{0x0010482242820000L});
+    public static final BitSet FOLLOW_WRITE_in_write768 = new BitSet(new long[]{0x0020904485040000L});
     public static final BitSet FOLLOW_expr_in_write771 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_orexpr_in_expr794 = new BitSet(new long[]{0x0000010000000002L});
-    public static final BitSet FOLLOW_QUESTION_in_expr797 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_expr_in_expr800 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_55_in_expr802 = new BitSet(new long[]{0x0010482242820000L});
+    public static final BitSet FOLLOW_orexpr_in_expr794 = new BitSet(new long[]{0x0000020000000002L});
+    public static final BitSet FOLLOW_QUESTION_in_expr797 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_expr_in_expr800 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_expr802 = new BitSet(new long[]{0x0020904485040000L});
     public static final BitSet FOLLOW_expr_in_expr805 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_boolterm_in_orexpr818 = new BitSet(new long[]{0x0000000800000002L});
-    public static final BitSet FOLLOW_OR_in_orexpr821 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_boolterm_in_orexpr824 = new BitSet(new long[]{0x0000000800000002L});
+    public static final BitSet FOLLOW_boolterm_in_orexpr818 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_OR_in_orexpr821 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_boolterm_in_orexpr824 = new BitSet(new long[]{0x0000001000000002L});
     public static final BitSet FOLLOW_boolfact_in_boolterm844 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_AND_in_boolterm847 = new BitSet(new long[]{0x0010482242820000L});
+    public static final BitSet FOLLOW_AND_in_boolterm847 = new BitSet(new long[]{0x0020904485040000L});
     public static final BitSet FOLLOW_boolfact_in_boolterm850 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_num_expr_in_boolfact870 = new BitSet(new long[]{0x0000000424608002L});
-    public static final BitSet FOLLOW_EQUAL_in_boolfact874 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_NOT_EQUAL_in_boolfact879 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_LT_in_boolfact884 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_LE_in_boolfact889 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_GT_in_boolfact894 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_GE_in_boolfact899 = new BitSet(new long[]{0x0010482242820000L});
+    public static final BitSet FOLLOW_num_expr_in_boolfact870 = new BitSet(new long[]{0x0000000848C08002L});
+    public static final BitSet FOLLOW_EQUAL_in_boolfact874 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_NOT_EQUAL_in_boolfact879 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_LT_in_boolfact884 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_LE_in_boolfact889 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_GT_in_boolfact894 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_GE_in_boolfact899 = new BitSet(new long[]{0x0020904485040000L});
     public static final BitSet FOLLOW_num_expr_in_boolfact903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_term_in_num_expr923 = new BitSet(new long[]{0x0000002040000002L});
-    public static final BitSet FOLLOW_PLUS_in_num_expr928 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_MINUS_in_num_expr933 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_term_in_num_expr937 = new BitSet(new long[]{0x0000002040000002L});
-    public static final BitSet FOLLOW_factor_in_term961 = new BitSet(new long[]{0x0000000180000202L});
-    public static final BitSet FOLLOW_MUL_in_term966 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_DIV_in_term971 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_MOD_in_term976 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_factor_in_term980 = new BitSet(new long[]{0x0000000180000202L});
-    public static final BitSet FOLLOW_NOT_in_factor1003 = new BitSet(new long[]{0x0010480002820000L});
-    public static final BitSet FOLLOW_PLUS_in_factor1008 = new BitSet(new long[]{0x0010480002820000L});
-    public static final BitSet FOLLOW_MINUS_in_factor1013 = new BitSet(new long[]{0x0010480002820000L});
-    public static final BitSet FOLLOW_atom_in_factor1018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_var_in_atom1043 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_atom1057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_atom1071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TRUE_in_atom1088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FALSE_in_atom1094 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_funcall_in_atom1117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_atom1131 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_expr_in_atom1134 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_53_in_atom1136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_funcall1157 = new BitSet(new long[]{0x0010000000000000L});
-    public static final BitSet FOLLOW_52_in_funcall1159 = new BitSet(new long[]{0x0030482242820000L});
-    public static final BitSet FOLLOW_expr_list_in_funcall1161 = new BitSet(new long[]{0x0020000000000000L});
-    public static final BitSet FOLLOW_53_in_funcall1164 = new BitSet(new long[]{0x0200000000000002L});
-    public static final BitSet FOLLOW_57_in_funcall1166 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_expr_in_funcall1167 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_58_in_funcall1168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_expr_list1206 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_54_in_expr_list1209 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_expr_in_expr_list1212 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_ID_in_var1231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_var1241 = new BitSet(new long[]{0x0200000000000000L});
-    public static final BitSet FOLLOW_57_in_var1242 = new BitSet(new long[]{0x0010482242820000L});
-    public static final BitSet FOLLOW_expr_in_var1243 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_58_in_var1244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_term_in_num_expr923 = new BitSet(new long[]{0x0000004080000002L});
+    public static final BitSet FOLLOW_PLUS_in_num_expr928 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_MINUS_in_num_expr933 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_term_in_num_expr937 = new BitSet(new long[]{0x0000004080000002L});
+    public static final BitSet FOLLOW_factor_in_term961 = new BitSet(new long[]{0x0000000300000202L});
+    public static final BitSet FOLLOW_MUL_in_term966 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_DIV_in_term971 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_MOD_in_term976 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_factor_in_term980 = new BitSet(new long[]{0x0000000300000202L});
+    public static final BitSet FOLLOW_NOT_in_factor1003 = new BitSet(new long[]{0x0020900005040000L});
+    public static final BitSet FOLLOW_PLUS_in_factor1008 = new BitSet(new long[]{0x0020900005040000L});
+    public static final BitSet FOLLOW_MINUS_in_factor1013 = new BitSet(new long[]{0x0020900005040000L});
+    public static final BitSet FOLLOW_factorial_in_factor1018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_atom_in_factorial1034 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_FACTORIAL_in_factorial1036 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_var_in_atom1053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_atom1067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INT_in_atom1081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TRUE_in_atom1098 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FALSE_in_atom1104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_funcall_in_atom1127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_atom1141 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_expr_in_atom1144 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_54_in_atom1146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_funcall1167 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_53_in_funcall1169 = new BitSet(new long[]{0x0060904485040000L});
+    public static final BitSet FOLLOW_expr_list_in_funcall1171 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_54_in_funcall1174 = new BitSet(new long[]{0x0400000000000002L});
+    public static final BitSet FOLLOW_58_in_funcall1176 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_expr_in_funcall1177 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_59_in_funcall1178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_expr_list1216 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_55_in_expr_list1219 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_expr_in_expr_list1222 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_ID_in_var1241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_var1251 = new BitSet(new long[]{0x0400000000000000L});
+    public static final BitSet FOLLOW_58_in_var1252 = new BitSet(new long[]{0x0020904485040000L});
+    public static final BitSet FOLLOW_expr_in_var1253 = new BitSet(new long[]{0x0800000000000000L});
+    public static final BitSet FOLLOW_59_in_var1254 = new BitSet(new long[]{0x0000000000000002L});
 
 }

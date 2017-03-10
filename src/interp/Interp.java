@@ -315,12 +315,15 @@ public class Interp {
         return null;
     }
 
+    private static int fact(int n) {
+        return n == 0 ? 1 : fact(n-1)*n;
+    }
+
     /**
      * Evaluates the expression represented in the AST t.
      * @param t The AST of the expression
      * @return The value of the expression.
      */
-     
     private Data evaluateExpression(AslTree t) {
         assert t != null;
 
@@ -330,14 +333,19 @@ public class Interp {
         Data value = null;
         // Atoms
         switch (type) {
+            case AslLexer.FACTORIAL:
+                value = evaluateExpression(t.getChild(0));
+                checkInteger(value);
+                if (value.getIntegerValue() < 0) throw new RuntimeException("MATH ERROR: factorial must be a natural number");
+                value.setValue(fact(value.getIntegerValue()));
+                break;
             // A variable
             case AslLexer.QUESTION:
                 value = evaluateExpression(t.getChild(0));
                 if (!value.isBoolean()) throw new RuntimeException("First operand of ternary expression must be of boolean type, but returned " + value.getType().name());
-                if (value.getBooleanValue()) {
-                    return evaluateExpression(t.getChild(1));
-                }
-                return evaluateExpression(t.getChild(2));
+                if (value.getBooleanValue()) value = evaluateExpression(t.getChild(1));
+                else value = evaluateExpression(t.getChild(2));
+                break;
             case AslLexer.VECTOR: {
                 value = Stack.getVariable(t.getText());
                 Data index = evaluateExpression(t.getChild(0));
@@ -348,7 +356,8 @@ public class Interp {
                 break;
             }
             case AslLexer.STRING:
-                return new Data(t.getStringValue());
+                value = new Data(t.getStringValue());
+                break;
             case AslLexer.ID:
                 Data data = Stack.getVariable(t.getText());
                 if (data.isArray()) value = data;
