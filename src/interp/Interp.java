@@ -240,13 +240,17 @@ public class Interp {
 
             // Assignment
             case AslLexer.ASSIGN:
-                value = evaluateExpression(t.getChild(1));
+                if (t.getChild(0).getChildCount() != t.getChild(1).getChildCount()) throw new RuntimeException("Different number of assignment to variables");
+                for (int i = 0; i < t.getChild(0).getChildCount(); ++i) {
+                    Stack.defineVariable(t.getChild(0).getChild(i).getText(), evaluateExpression(t.getChild(1).getChild(i)));
+                }
+                /*value = evaluateExpression(t.getChild(1));
                 if (t.getChild(0).getType() == AslLexer.VECTOR) {
                     Data result = evaluateExpression(t.getChild(0).getChild(0));
                     if (!result.isInteger()) throw new RuntimeException("Array index must be an integer value");
                     Stack.defineArray(t.getChild(0).getText(), value, result.getIntegerValue());
                 }
-                else Stack.defineVariable (t.getChild(0).getText(), value);
+                else Stack.defineVariable (t.getChild(0).getText(), value);*/
                 return null;
 
             // If-then-else
@@ -297,16 +301,13 @@ public class Interp {
                     System.out.format(v.getStringValue());
                     return null;
                 }
-
                 // Write an expression
                 System.out.print(evaluateExpression(v).toString());
                 return null;
-
             // Function call
             case AslLexer.FUNCALL:
                 executeFunction(t.getChild(0).getText(), t.getChild(1));
                 return null;
-
             default: assert false; // Should never happen
         }
 
@@ -333,6 +334,15 @@ public class Interp {
         Data value = null;
         // Atoms
         switch (type) {
+            case AslLexer.SUMFUNC:
+                int res = 0;
+                for (int i = 0; i < t.getChildCount(); ++i) {
+                    Data arg = evaluateExpression(t.getChild(i));
+                    checkInteger(arg);
+                    res += arg.getIntegerValue();
+                }
+                value = new Data(res);
+                break;
             case AslLexer.FACTORIAL:
                 value = evaluateExpression(t.getChild(0));
                 checkInteger(value);
@@ -524,7 +534,6 @@ public class Interp {
      * @param args The AST of the list of arguments passed by the caller.
      * @return The list of evaluated arguments.
      */
-     
     private ArrayList<Data> listArguments (AslTree AstF, AslTree args) {
         if (args != null) setLineNumber(args);
         AslTree pars = AstF.getChild(1);   // Parameters of the function

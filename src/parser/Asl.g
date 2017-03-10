@@ -47,6 +47,7 @@ tokens {
     VECTOR;
     FUNCVEC;
     TERNARY;
+    VARLIST;
 }
 
 @header {
@@ -100,7 +101,7 @@ instruction
         ;
 
 // Assignment
-assign	:	var eq=EQUAL expr -> ^(ASSIGN[$eq,":="] var expr)
+assign	:	var(',' var)* eq=EQUAL expr_list -> ^(ASSIGN[$eq,":="] ^(VARLIST var+) ^(ARGLIST expr_list))
         ;
 
 // if-then-else (else is optional)
@@ -152,12 +153,12 @@ atom    :   var
         |   INT
         |   (b=TRUE | b=FALSE)  -> ^(BOOLEAN[$b,$b.text])
         |   funcall
+        |   SUMFUNC^'('! expr_list? ')'!
         |   '('! expr ')'!
         ;
 
 // A function call has a lits of arguments in parenthesis (possibly empty)
 funcall :   ID '(' expr_list? ')'('['expr']')? -> ^(FUNCALL ID ^(ARGLIST expr_list?) expr?)
-        |   SUMFUNC^'('! expr_list? ')'!
         ;
 
 // A list of expressions separated by commas
@@ -169,7 +170,7 @@ var : ID
     ;
 
 // Basic tokens
-SUMFUNC: 'sum'
+SUMFUNC: 'sum';
 FACTORIAL : '!';
 QUESTION : '?';
 EQUAL	: '=' ;
