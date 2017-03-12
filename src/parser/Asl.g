@@ -48,6 +48,7 @@ tokens {
     FUNCVEC;
     TERNARY;
     VARLIST;
+    SIZE;
 }
 
 @header {
@@ -167,6 +168,7 @@ expr_list:  expr (','! expr)*
 
 var : ID
     | id=ID'['expr']' -> ^(VECTOR[$id.text] expr)
+    | id=ID'.size' -> ^(SIZE[$id.text])
     ;
 
 // Basic tokens

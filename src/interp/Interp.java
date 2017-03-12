@@ -242,15 +242,16 @@ public class Interp {
             case AslLexer.ASSIGN:
                 if (t.getChild(0).getChildCount() != t.getChild(1).getChildCount()) throw new RuntimeException("Different number of assignment to variables");
                 for (int i = 0; i < t.getChild(0).getChildCount(); ++i) {
-                    Stack.defineVariable(t.getChild(0).getChild(i).getText(), evaluateExpression(t.getChild(1).getChild(i)));
+                    AslTree left = t.getChild(0).getChild(i);
+                    AslTree right = t.getChild(1).getChild(i);
+                    value = evaluateExpression(right);
+                    if (left.getType() == AslLexer.VECTOR) {
+                        Data result = evaluateExpression(left.getChild(0));
+                        if (!result.isInteger()) throw new RuntimeException("Array index must be an integer value");
+                        Stack.defineArray(left.getText(), value, result.getIntegerValue());
+                    }
+                    else Stack.defineVariable (left.getText(), value);
                 }
-                /*value = evaluateExpression(t.getChild(1));
-                if (t.getChild(0).getType() == AslLexer.VECTOR) {
-                    Data result = evaluateExpression(t.getChild(0).getChild(0));
-                    if (!result.isInteger()) throw new RuntimeException("Array index must be an integer value");
-                    Stack.defineArray(t.getChild(0).getText(), value, result.getIntegerValue());
-                }
-                else Stack.defineVariable (t.getChild(0).getText(), value);*/
                 return null;
 
             // If-then-else
@@ -334,6 +335,11 @@ public class Interp {
         Data value = null;
         // Atoms
         switch (type) {
+            case AslLexer.SIZE:
+                value = Stack.getVariable(t.getText());
+                if (!value.isArray()) throw new RuntimeException("Only arrays have size, but " + t.getText() + " is a " + value.getType());
+                value = new Data(value.getArrayValue().size());
+                break;
             case AslLexer.SUMFUNC:
                 int res = 0;
                 for (int i = 0; i < t.getChildCount(); ++i) {
@@ -358,7 +364,9 @@ public class Interp {
                 break;
             case AslLexer.VECTOR: {
                 value = Stack.getVariable(t.getText());
+                if (!value.isArray()) throw new RuntimeException("Variable " + t.getText() + " is not a vector");
                 Data index = evaluateExpression(t.getChild(0));
+                checkInteger(index);
                 Data.Type arrayType = value.getType();
                 int val = value.getArrayValue().get(index.getIntegerValue());
                 if (arrayType == Data.Type.BOOLEAN) value = new Data(val != 0);
@@ -388,6 +396,7 @@ public class Interp {
                 if (t.getChildCount() > 2) {
                     if (value.isArray()) {
                         Data index = evaluateExpression(t.getChild(2));
+                        checkInteger(index);
                         Data.Type arrayType = value.getType();
                         int val = value.getArrayValue().get(index.getIntegerValue());
                         if (arrayType == Data.Type.BOOLEAN) value = new Data(val != 0);

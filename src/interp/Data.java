@@ -139,6 +139,7 @@ public class Data {
 
     /** Copies the value from another data */
     public void setData(Data d) {
+        array = null;
         type = d.type;
         if (type == Type.STRING) {
             string = d.string;
