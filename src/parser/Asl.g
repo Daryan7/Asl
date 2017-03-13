@@ -94,6 +94,7 @@ instruction
         :	assign          // Assignment
         |	ite_stmt        // if-then-else
         |	while_stmt      // while statement
+        |   for_stmt
         |   funcall         // Call to a procedure (no result produced)
         |	return_stmt     // Return statement
         |	read            // Read a variable
@@ -111,6 +112,9 @@ ite_stmt	:	IF^ expr THEN! block_instructions (ELSE! block_instructions)? ENDIF!
 
 // while statement
 while_stmt	:	WHILE^ expr DO! block_instructions ENDWHILE!
+            ;
+
+for_stmt    :   FOR^ ID ':'! ID DO! block_instructions ENDFOR!
             ;
 
 // Return statement with an expression
@@ -172,6 +176,8 @@ var : ID
     ;
 
 // Basic tokens
+FOR :   'for';
+ENDFOR  :   'endfor';
 SUMFUNC: 'sum';
 FACTORIAL : '!';
 QUESTION : '?';

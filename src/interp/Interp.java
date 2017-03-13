@@ -263,6 +263,16 @@ public class Interp {
                 if (t.getChildCount() == 3) return executeListInstructions(t.getChild(2));
                 return null;
 
+            case AslLexer.FOR:
+                Data array = Stack.getVariable(t.getChild(1).getText());
+                if (!array.isArray()) throw new RuntimeException("Variable " + t.getChild(1).getText() + " must be an array, but it is a " + array.getType());
+                for (Integer val : array.getArrayValue()) {
+                    Stack.defineVariable(t.getChild(0).getText(), new Data(val));
+                    Data r = executeListInstructions(t.getChild(2));
+                    if (r != null) return r;
+                }
+                return null;
+
             // While
             case AslLexer.WHILE:
                 while (true) {
